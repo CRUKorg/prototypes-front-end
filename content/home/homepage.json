@@ -1,0 +1,24 @@
+{
+  "title": "Home",
+  "content": "intro.md",
+  "gallery": [{
+    "title": "Design",
+    "copy": "Find out how we approach the visual elements of our interface with purpose.",
+    "image": "../images/gallery/image.png"
+  },
+  {
+    "title": "Patterns",
+    "copy": "See how we put the pieces together to create meaningful product experiences.",
+    "image": "../images/gallery/image.png"
+  },
+  {
+    "title": "Components",
+    "copy": "Use components as building blocks as you develop new products and features.",
+    "image": "../images/gallery/image.png"
+  },
+  {
+    "title": "Content",
+    "copy": "Learn how to use language to design a more thoughtful product experience.",
+    "image": "../images/gallery/image.png"
+  }]
+}
