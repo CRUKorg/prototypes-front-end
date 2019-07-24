@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   siteTitle: `Starling | Cancer Research UK`,
   siteTitleShort: `Starling`,
-  siteDescription: `Things you need for a design system`,
+  siteDescription: `Design systems are made from many ingredients that come together to help the organization tell the story of how they design and build digital things.`,
   siteUrl: `https://www.cancerresearchuk.org/`,
   themeColor: `#000`,
   backgroundColor: `#fff`,

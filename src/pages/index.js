@@ -2,19 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Layout from 'components/layout';
 import Box from 'components/box';
-import Title from 'components/title';
 import Gallery from 'components/gallery';
 import { graphql } from 'gatsby';
+import { MainBanner, MainTitle } from '../components/box/box.css';
 
 const Index = ({ data }) => (
   <Layout>
+    <MainBanner>
+      <Box>
+        <MainTitle>
+          {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
+        </MainTitle>
+      </Box>
+    </MainBanner>
     <Box>
-      <Title as="h2" size="large">
-        {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
-      </Title>
+      <Gallery items={data.homeJson.gallery} />
     </Box>
-    <Gallery items={data.homeJson.gallery} />
-    <div style={{ height: '50vh' }} />
   </Layout>
 );
 
@@ -44,6 +47,7 @@ export const query = graphql`
             }
           }
         }
+        toPage
       }
     }
   }

@@ -5,28 +5,28 @@ import Layout from 'components/layout';
 import Box from 'components/box';
 import Head from 'components/head';
 
-const About = ({ data }) => (
+const Patterns = ({ data }) => (
   <Layout>
-    <Head pageTitle={data.aboutJson.title} />
+    <Head pageTitle={data.patternsJson.title} />
     <Box>
       <div
         dangerouslySetInnerHTML={{
-          __html: data.aboutJson.content.childMarkdownRemark.html,
+          __html: data.patternsJson.content.childMarkdownRemark.html,
         }}
       />
     </Box>
   </Layout>
 );
 
-About.propTypes = {
+Patterns.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-export default About;
+export default Patterns;
 
 export const query = graphql`
-  query AboutQuery {
-    aboutJson {
+  query PatternsQuery {
+    patternsJson {
       title
       content {
         childMarkdownRemark {

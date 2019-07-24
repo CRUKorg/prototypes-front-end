@@ -4,13 +4,28 @@ import { StaticQuery, graphql } from 'gatsby';
 import Head from 'components/head';
 import Header from 'components/header';
 import GlobalStyle from 'global.css.js';
+import { TopBanner, Main, Footer } from './layout.css';
 
 const Layout = ({ data, children }) => (
   <div>
     <GlobalStyle />
+    <TopBanner>
+      <span role="img" aria-label="waving hands">
+        👋
+      </span>
+      &nbsp;Hi, this is a demo!
+    </TopBanner>
     <Head />
     <Header title={data.site.siteMetadata.siteTitle} />
-    {children}
+    <Main>
+      {children}
+    </Main>
+    <Footer>
+      <a href="https://tinyurl.com/y4hz4fyu">Find Team Starling</a> |&nbsp;
+      <a href="mailto:Tech-ProjectStarling@CancerResearchUKO365.onmicrosoft.com">
+        Drop us an email
+      </a>
+    </Footer>
   </div>
 );
 
