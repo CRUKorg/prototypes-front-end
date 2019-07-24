@@ -1,2 +1,1 @@
-A Design System is the single source of truth which groups all the elements that will allow the 
-teams to design, realize and develop a product.
+<blockquote> A Design System is made from many ingredients that come together to help the organization tell the story of how they design and build digital things.</blockquote>

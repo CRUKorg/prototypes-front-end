@@ -16,7 +16,7 @@ export default createGlobalStyle`
     font-weight: normal;
     font-style: normal;
   }
-  html, body, div, span, applet, object, iframe, blockquote, pre,
+  html, body, div, span, applet, object, iframe, pre,
   a, abbr, acronym, address, big, cite, code,
   del, dfn, em, img, ins, kbd, q, s, samp,
   small, strike, strong, sub, sup, tt, var,
@@ -95,14 +95,23 @@ export default createGlobalStyle`
     list-style: none;
   }
 
-  blockquote, q {
-    quotes: none;
+  blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
   }
-
-  blockquote:before, blockquote:after,
-  q:before, q:after {
-    content: '';
-    content: none;
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  blockquote p {
+    display: inline;
   }
 
   table {

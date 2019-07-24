@@ -10,9 +10,11 @@ const Index = ({ data }) => (
   <Layout>
     <MainBanner>
       <Box>
-        <MainTitle>
-          {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
-        </MainTitle>
+        <MainTitle
+          dangerouslySetInnerHTML={{
+            __html: data.homeJson.content.childMarkdownRemark.html,
+          }}
+        />
       </Box>
     </MainBanner>
     <Box>

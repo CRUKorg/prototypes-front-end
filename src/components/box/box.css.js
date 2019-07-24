@@ -7,9 +7,14 @@ export const Container = styled.div`
 `;
 
 export const MainTitle = styled.h1`
-  padding: 4rem 2rem;
-  max-width: 700px;
+  padding: 2rem;
+  max-width: 800px;
   line-height: 1.2;
+  blockquote {
+    border-left: 7px solid #ccc;
+    padding: 0 0 0 15px;
+    margin: 0;
+  }
 `;
 
 export const MainBanner = styled.div`
