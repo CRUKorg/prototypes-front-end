@@ -1,5 +1,5 @@
+/* eslint-disable */
 import styled from 'styled-components';
-import { COLORS } from '../../constants/constants';
 
 export const Container = styled.div`
   max-width: 1400px;

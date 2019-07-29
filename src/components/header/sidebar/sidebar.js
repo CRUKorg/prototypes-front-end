@@ -1,26 +1,31 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { SideNav } from './sidebar.css';
 
 const Sidebar = () => (
   <SideNav>
     <ul>
+      <li><span>Design token</span></li>
       <li>
-        <Link to="/visual">Design token</Link>
+        <span>Colors</span>
         <ul>
           <li>
-            <Link to="/visual">Color</Link>
+            <span>Primary colors</span>
           </li>
           <li>
-            <Link to="/visual">Type scale</Link>
-          </li>
-          <li>
-            <Link to="/visual">Spacing</Link>
+            <span>Color palette</span>
+            <ul>
+              <li>Dark Blue</li>
+              <li>Magenta</li>
+              <li>Cyan</li>
+            </ul>
           </li>
         </ul>
       </li>
       <li>
-        <Link to="/visual">Color</Link>
+        <span>Type scale</span>
+      </li>
+      <li>
+        <span>Spacing</span>
       </li>
     </ul>
   </SideNav>

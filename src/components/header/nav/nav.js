@@ -11,13 +11,19 @@ const Nav = () => (
         </Link>
       </li>
       <li>
-        <Link to="/design">Design</Link>
+        <Link to="/design" activeClassName="active" partiallyActive={true}>
+          Design
+        </Link>
       </li>
       <li>
-        <Link to="/components">Components</Link>
+        <Link to="/components" activeClassName="active" partiallyActive={true}>
+          Components
+        </Link>
       </li>
       <li>
-        <Link to="/patterns">Patterns & guides</Link>
+        <Link to="/patterns" activeClassName="active" partiallyActive={true}>
+          Patterns & guides
+        </Link>
       </li>
       <li>
         <a

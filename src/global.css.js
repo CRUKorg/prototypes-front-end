@@ -151,4 +151,101 @@ export default createGlobalStyle`
     width: 100%;
     height: auto;
   }
+  strong {
+    font-weight: bold;
+  }
+  
+  /* Markdown docs */
+  .doc {
+    display: flex;
+    justify-content: space-between;
+    
+    .layout-30 {
+      div:nth-child(1) {
+        width: 30%;
+      }
+      div:nth-child(2) { 
+        width: 69%;
+      }
+    }
+    .layout-50 {
+      div:nth-child(1),
+      div:nth-child(2) {
+        width: 50%;
+      }
+    }
+    .color-block {
+      display: block;  
+      height: 115px; 
+      padding-top: 45px; 
+      color: white; 
+      text-align: center; 
+    }
+    .color-palette-block {
+      width: 20%;
+      padding-top: 15%;
+      text-align: center;
+    }
+    .color-palettes {
+      width: 80%;
+      position: relative;
+     
+      label, input {
+        height: 60px;
+      }
+      label {
+        width: 50%;
+        display: block;
+        text-align: center;
+        padding-top: 20px;
+        cursor: pointer; 
+        transition: all 0.15s 0s;
+      }
+      input {
+        position: absolute;
+        opacity: 0;
+        width: 50%;
+        cursor: pointer;
+      }
+      .color-content {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        min-width: 400px;
+        background-color: #F3F4F4;
+        display: none;
+        height: 100%;
+        padding: 0 20px;
+        
+        span {
+          display: block;
+          &:nth-child(2) {
+            background-color: white;
+            border-radius: 4px;
+            padding: 5px 10px;
+          }
+        }
+      }
+      input:checked ~ div { display: block; }
+      input:checked ~ label { text-decoration: underline; }
+      input:checked ~ label .white { text-decoration: underline; color: white; }
+      input:hover ~ label { transform: scale(1.03); }
+    }
+  }
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex {
+    display: flex;
+    justify-content:
+    space-between;
+  }
+  .flex-full {
+    width: 100%;
+  }
+  .white {
+    color: white;
+  }
 `;

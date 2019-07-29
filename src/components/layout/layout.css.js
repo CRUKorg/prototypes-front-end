@@ -1,19 +1,6 @@
 import styled from 'styled-components';
 import { COLORS } from '../../constants/constants';
 
-export const TopBanner = styled.div`
-  width: 100%;
-  position: fixed;
-  top: 0;
-  display: block;
-  padding: 10px 0;
-  background-color: hsla(324, 100%, 46%, 0.7);
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  z-index: 1000;
-`;
-
 export const Footer = styled.div`
   width: 100%;
   display: block;
@@ -34,4 +21,17 @@ export const Main = styled.div`
   height: 100%;
   padding: 0;
   min-height: calc(100vh - 50px);
+`;
+
+export const TopBanner = styled.div`
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: block;
+  padding: 10px 0;
+  background-color: hsla(324, 100%, 46%, 0.7);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1000;
 `;

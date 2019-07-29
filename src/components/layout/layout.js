@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import Head from 'components/head';
 import Header from 'components/header';
-import GlobalStyle from 'global.css.js';
-import { TopBanner, Main, Footer } from './layout.css';
+import GlobalStyle from 'global.css';
+import { Footer, Main, TopBanner } from './layout.css';
 
 const Layout = ({ data, children }) => (
   <div>
@@ -17,9 +17,7 @@ const Layout = ({ data, children }) => (
     </TopBanner>
     <Head />
     <Header title={data.site.siteMetadata.siteTitle} />
-    <Main>
-      {children}
-    </Main>
+    <Main>{children}</Main>
     <Footer>
       <a href="https://tinyurl.com/y4hz4fyu">Find Team Starling</a> |&nbsp;
       <a href="mailto:Tech-ProjectStarling@CancerResearchUKO365.onmicrosoft.com">
