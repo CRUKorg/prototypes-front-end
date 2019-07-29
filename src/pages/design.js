@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Layout from 'components/layout';
 import Box from 'components/box';
-import Flex from 'components/flex';
+import Flex from 'components/flex/flex';
 import Head from 'components/head';
 import Sidebar from 'components/header/sidebar/sidebar';
 
