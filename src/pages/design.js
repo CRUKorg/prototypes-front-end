@@ -11,11 +11,12 @@ import Sidebar from 'components/header/sidebar/sidebar';
 const StyledBox = styled.div`
   padding: 20px 2% 0;
 `;
+
 const Design = ({ data }) => (
   <Layout>
     <Head pageTitle={data.designJson.title} />
     <Flex>
-      <Sidebar />
+      <Sidebar cat="design" />
       <Box>
         <StyledBox>
           <div

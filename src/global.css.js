@@ -248,4 +248,10 @@ export default createGlobalStyle`
   .white {
     color: white;
   }
+  .space {
+    display: block;
+    background-color: #00B6ED;
+    margin: 0 20px;
+    height: 100px;
+  }
 `;

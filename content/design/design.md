@@ -1,4 +1,4 @@
-## Design token
+# Design token
 
 Design tokens are the visual design atoms of the design system — specifically, they are named
 entities that store visual design attributes. We use them in place of hard-coded values
@@ -7,7 +7,7 @@ consistent visual system for UI development.
 
 ## Colors
 
-We use a flexible color palette that places emphasis on important elements.
+### We use a flexible color palette that places emphasis on important elements.
 
 ## Primary colors
 
@@ -494,4 +494,37 @@ We use a flexible color palette that places emphasis on important elements.
     </div>
   </div>
 </div>
+<p>&nbsp;</p>
 
+## Spacing
+
+#### Our spacing tokens make it easy to add padding, margins, and position coordinates. Start with an 8px grid, so that our spacing options are set in multiples of 8 (ie, 8, 16, 24, 32, etc).
+
+<div class="doc flex" style="justify-content: flex-start; text-align: center;">
+  <div class="flex flex-column">
+    <span class="space" style="width: 8px;"></span>
+    <span>8px</span>
+  </div>
+  <div class="flex flex-column">
+    <span class="space" style="width: 16px;"></span>
+    <span>16px</span>
+  </div>
+  <div class="flex flex-column">
+    <span class="space" style="width: 24px;"></span>
+    <span>24px</span>
+  </div>
+  <div class="flex flex-column">
+    <span class="space" style="width: 32px;"></span>
+    <span>32px</span>
+  </div>
+</div>
+<p>&nbsp;</p>
+
+## Usage
+
+* Spacing can be applied uniformly or individually to the sides of an element.
+* Spacing is flexible based on viewport size. It can scale up or down proportional to the root font size.
+
+<p>&nbsp;</p>
+
+## Type scale

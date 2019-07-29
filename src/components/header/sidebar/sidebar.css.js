@@ -8,6 +8,7 @@ export const SideNav = styled.div`
   font-family: ${TYPOGRAPHY.fontFamilyHeadings};
   padding-top: 24px;
   padding-left: 15px;
+  height: 100vh;
   li {
     display: block;
     padding-top: 0;
