@@ -4,7 +4,11 @@ import Layout from 'components/layout';
 import Box from 'components/box';
 import Gallery from 'components/gallery';
 import { graphql } from 'gatsby';
-import { MainBanner, MainTitle } from '../components/box/box.css';
+import {
+  ContentWrapper,
+  MainBanner,
+  MainTitle,
+} from '../components/box/box.css';
 
 const Index = ({ data }) => (
   <Layout>
@@ -12,13 +16,20 @@ const Index = ({ data }) => (
       <Box>
         <MainTitle
           dangerouslySetInnerHTML={{
-            __html: data.homeJson.content.childMarkdownRemark.html,
+            __html: data.homeJson.intro.childMarkdownRemark.html,
           }}
         />
       </Box>
     </MainBanner>
     <Box>
       <Gallery items={data.homeJson.gallery} />
+    </Box>
+    <Box>
+      <ContentWrapper
+        dangerouslySetInnerHTML={{
+          __html: data.homeJson.content.childMarkdownRemark.html,
+        }}
+      />
     </Box>
   </Layout>
 );
@@ -33,7 +44,7 @@ export const query = graphql`
   query HomepageQuery {
     homeJson {
       title
-      content {
+      intro {
         childMarkdownRemark {
           html
           rawMarkdownBody
@@ -50,6 +61,12 @@ export const query = graphql`
           }
         }
         toPage
+      }
+      content {
+        childMarkdownRemark {
+          html
+          rawMarkdownBody
+        }
       }
     }
   }

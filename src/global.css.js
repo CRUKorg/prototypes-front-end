@@ -250,7 +250,7 @@ export default createGlobalStyle`
   }
   .space {
     display: block;
-    background-color: #00B6ED;
+    background-color: #f7a0b1;
     margin: 0 20px;
     height: 100px;
   }

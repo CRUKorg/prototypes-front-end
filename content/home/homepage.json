@@ -1,6 +1,6 @@
 {
   "title": "Home",
-  "content": "intro.md",
+  "intro": "intro.md",
   "gallery": [
   {
     "title": "Content",
@@ -25,5 +25,6 @@
     "copy": "See how we put the pieces together to create meaningful product experiences.",
     "image": "../images/gallery/image.png",
     "toPage": "patterns"
-  }]
+  }],
+  "content": "content.md"
 }
