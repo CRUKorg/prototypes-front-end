@@ -260,4 +260,17 @@ export default createGlobalStyle`
     border: 2px solid #F3F4F4;
     border-radius: 4px;
   }
+  .type-scale-bar-text {
+    height: 100%;
+    margin-bottom: 16px;
+  }
+  .type-scale-bar-text span {
+    display: block;
+    width: 100%; 
+    height: 100%;
+    border-left: 5px solid #f7a0b1;
+    &:after {
+      content: "";
+    }
+  }
 `;

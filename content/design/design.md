@@ -534,23 +534,59 @@ you get started using the correct sizes for your content.
 
 ### Example: resize the screen width to view the change</span>
 <div class="type-scale">
-  <h1>H1. Cras sed cursus lectus, sit amet congue neque.</h1>
-  <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
-  nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
-  <h2>H2. Cras sed cursus lectus, sit amet congue neque.</h1>
-  <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
-  nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
-  <h3>H3. Cras sed cursus lectus, sit amet congue neque.</h1>
-  <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
-  nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
-  <h4>H4. Cras sed cursus lectus, sit amet congue neque.</h1>
-  <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
-  nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
-  <h5>H5. Cras sed cursus lectus, sit amet congue neque.</h1>
-  <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
-  nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
-  <h6>H6. Cras sed cursus lectus, sit amet congue neque.</h1>
-  <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
-  nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  <div>
+    <div class="type-scale-bar-text flex" style="flex-direction: column;">
+      <span>&nbsp;</span>
+      <h1 style="margin: 0;">H1. Cras sed cursus lectus.</h1>
+      <span>&nbsp;</span>
+    </div>
+    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+      nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  </div>
+  <div>
+    <div class="type-scale-bar-text flex" style="flex-direction: column;">
+      <span>&nbsp;</span>
+      <h2 style="margin: 0;">H2. Cras sed cursus lectus.</h2>
+      <span>&nbsp;</span>
+    </div>
+    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+      nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  </div>
+  <div>
+    <div class="type-scale-bar-text flex" style="flex-direction: column;">
+      <span>&nbsp;</span>
+      <h3 style="margin: 0;">H3. Cras sed cursus lectus.</h3>
+      <span>&nbsp;</span>
+    </div>
+    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+      nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  </div>  
+  <div>
+    <div class="type-scale-bar-text flex" style="flex-direction: column;">
+      <span>&nbsp;</span>
+      <h4 style="margin: 0;">H4. Cras sed cursus lectus.</h4>
+      <span>&nbsp;</span>
+    </div>
+    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+      nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  </div>
+  <div>
+    <div class="type-scale-bar-text flex" style="flex-direction: column;">
+      <span>&nbsp;</span>
+      <h5 style="margin: 0;">H5. Cras sed cursus lectus.</h5>
+      <span>&nbsp;</span>
+    </div>
+    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+      nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  </div>
+  <div>
+    <div class="type-scale-bar-text flex" style="flex-direction: column;">
+      <span>&nbsp;</span>
+      <h6 style="margin: 0;">H6. Cras sed cursus lectus.</h6>
+      <span>&nbsp;</span>
+    </div>
+    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+      nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  </div>
 </div>
 <p>&nbsp;</p>
