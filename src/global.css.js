@@ -44,11 +44,6 @@ export default createGlobalStyle`
     height: 100%;
     margin: 0;
   }
-  html {
-    font-size: ${TYPOGRAPHY.fontSizeBase};
-    font-family: ${TYPOGRAPHY.fontFamilyBase};
-    line-height: ${UTILITIES.lineHeight};
-  }
   body {
     background-color: ${COLORS.white};
     color: ${COLORS.grayDarker};
@@ -62,6 +57,9 @@ export default createGlobalStyle`
     -webkit-font-feature-settings: "pnum";
     font-feature-settings: "pnum";
     font-variant-numeric: proportional-nums;
+    font-family: ${TYPOGRAPHY.fontFamilyBase};
+    font-size: calc(12px + .35vw); 
+    line-height: calc(12px + 1.05vw);
   }
   *, *:after, *:before {
     -webkit-box-sizing: border-box;
@@ -71,15 +69,17 @@ export default createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     font-family: ${TYPOGRAPHY.fontFamilyHeadings};
     font-weight: ${TYPOGRAPHY.fontWeightMedium};
-    color: ${COLORS.grayDarker};
-    line-height: ${UTILITIES.lineHeight};
     margin-top: 0;
     margin-bottom: ${UTILITIES.rhythmVerticalBase};
     max-width: 100%;
+    margin: calc(12px + 1.05vw) 0;
   }
-  h1 { font-size: 1.4375rem; }
-  h2 { font-size: 1.1875rem; }
-  h3 { font-size: 1rem; }
+  h4, h5, h6 {
+    line-height: calc(18px + .2vw); 
+  }
+  h1 { font-size: 1.4375rem; line-height: calc(18px + 1.8vw); }
+  h2 { font-size: 1.1875rem; line-height: calc(18px + 1vw); }
+  h3 { font-size: 1rem; line-height: calc(18px + .7vw); }
   h4 { font-size: 0.875rem;  }
   h5 { font-size: 0.875rem;  }
   h6 { font-size: 0.75rem;   }
@@ -253,5 +253,11 @@ export default createGlobalStyle`
     background-color: #f7a0b1;
     margin: 0 20px;
     height: 100px;
+  }
+  .type-scale {
+    width: 80%;
+    padding: 20px;
+    border: 2px solid #F3F4F4;
+    border-radius: 4px;
   }
 `;

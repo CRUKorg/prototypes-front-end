@@ -524,7 +524,33 @@ consistent visual system for UI development.
 
 * Spacing can be applied uniformly or individually to the sides of an element.
 * Spacing is flexible based on viewport size. It can scale up or down proportional to the root font size.
-
 <p>&nbsp;</p>
 
-## Type scale
+## Responsive Type Scale
+
+When working with different type styles it’s important to adhere to the type scale at all times. 
+Never introduce a new type size. Below are some standards for the web we’ve defined to help 
+you get started using the correct sizes for your content.
+
+### Example: resize the screen width to view the change</span>
+<div class="type-scale">
+  <h1>H1. Cras sed cursus lectus, sit amet congue neque.</h1>
+  <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+  nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  <h2>H2. Cras sed cursus lectus, sit amet congue neque.</h1>
+  <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+  nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  <h3>H3. Cras sed cursus lectus, sit amet congue neque.</h1>
+  <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+  nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  <h4>H4. Cras sed cursus lectus, sit amet congue neque.</h1>
+  <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+  nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  <h5>H5. Cras sed cursus lectus, sit amet congue neque.</h1>
+  <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+  nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  <h6>H6. Cras sed cursus lectus, sit amet congue neque.</h1>
+  <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+  nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+</div>
+<p>&nbsp;</p>

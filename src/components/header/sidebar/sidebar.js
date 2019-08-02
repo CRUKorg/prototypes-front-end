@@ -28,7 +28,12 @@ const DesignNav = (
       <span>Spacing</span>
     </li>
     <li>
-      <span>Type scale</span>
+      <span>Typography</span>
+      <ul>
+        <li>
+          <span>Responsive Type Scale</span>
+        </li>
+      </ul>
     </li>
   </ul>
 );

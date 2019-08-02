@@ -14,3 +14,4 @@ public
 build
 
 .idea/*
+package-lock.json
