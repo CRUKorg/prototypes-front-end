@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
-import { accent } from 'constants/theme';
 import { COLORS, TYPOGRAPHY, UTILITIES } from 'constants/constants';
 import MEDIA from 'helpers/mediaTemplates';
+import { SiteSpecific } from './site-specific.css';
 
 export default createGlobalStyle`
   @font-face {
@@ -35,7 +35,6 @@ export default createGlobalStyle`
     font: inherit;
     vertical-align: baseline;
   }
-  /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure,
   footer, header, hgroup, menu, nav, section {
     display: block;
@@ -91,51 +90,7 @@ export default createGlobalStyle`
     h5 { font-size: 1rem; } 
     h6 { font-size: 0.875rem; } 
   `};
-  ol, ul {
-    list-style: none;
-  }
-
-  blockquote {
-    background: #f9f9f9;
-    border-left: 10px solid #ccc;
-    margin: 1.5em 10px;
-    padding: 0.5em 10px;
-    quotes: "\201C""\201D""\2018""\2019";
-  }
-  blockquote:before {
-    color: #ccc;
-    content: open-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
-  }
-  blockquote p {
-    display: inline;
-  }
-
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-
-  pre {
-    display: block;
-    padding: 2rem;
-    margin-top: 4rem;
-    overflow: auto;
-    font-size: 85%;
-    line-height: 1.45;
-    border-radius: 5px;
-    color: ${accent};
-    border: 1px solid #ddd;
-    font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
-  }
-
-  video {
-    max-width: 100%;
-  }
-
+  
   p {
     line-height: ${UTILITIES.lineHeight};
   }
@@ -147,130 +102,5 @@ export default createGlobalStyle`
     }
   }
   
-  img {
-    width: 100%;
-    height: auto;
-  }
-  strong {
-    font-weight: bold;
-  }
-  
-  /* Markdown docs */
-  .doc {
-    display: flex;
-    justify-content: space-between;
-    
-    .layout-30 {
-      div:nth-child(1) {
-        width: 30%;
-      }
-      div:nth-child(2) { 
-        width: 69%;
-      }
-    }
-    .layout-50 {
-      div:nth-child(1),
-      div:nth-child(2) {
-        width: 50%;
-      }
-    }
-    .color-block {
-      display: block;  
-      height: 115px; 
-      padding-top: 45px; 
-      color: white; 
-      text-align: center; 
-    }
-    .color-palette-block {
-      width: 20%;
-      padding-top: 15%;
-      text-align: center;
-    }
-    .color-palettes {
-      width: 80%;
-      position: relative;
-     
-      label, input {
-        height: 60px;
-      }
-      label {
-        width: 50%;
-        display: block;
-        text-align: center;
-        padding-top: 20px;
-        cursor: pointer; 
-        transition: all 0.15s 0s;
-      }
-      input {
-        position: absolute;
-        opacity: 0;
-        width: 50%;
-        cursor: pointer;
-      }
-      .color-content {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 50%;
-        min-width: 400px;
-        background-color: #F3F4F4;
-        display: none;
-        height: 100%;
-        padding: 0 20px;
-        
-        span {
-          display: block;
-          &:nth-child(2) {
-            background-color: white;
-            border-radius: 4px;
-            padding: 5px 10px;
-          }
-        }
-      }
-      input:checked ~ div { display: block; }
-      input:checked ~ label { text-decoration: underline; }
-      input:checked ~ label .white { text-decoration: underline; color: white; }
-      input:hover ~ label { transform: scale(1.03); }
-    }
-  }
-  .flex-column {
-    display: flex;
-    flex-direction: column;
-  }
-  .flex {
-    display: flex;
-    justify-content:
-    space-between;
-  }
-  .flex-full {
-    width: 100%;
-  }
-  .white {
-    color: white;
-  }
-  .space {
-    display: block;
-    background-color: #f7a0b1;
-    margin: 0 20px;
-    height: 100px;
-  }
-  .type-scale {
-    width: 80%;
-    padding: 20px;
-    border: 2px solid #F3F4F4;
-    border-radius: 4px;
-  }
-  .type-scale-bar-text {
-    height: 100%;
-    margin-bottom: 16px;
-  }
-  .type-scale-bar-text span {
-    display: block;
-    width: 100%; 
-    height: 100%;
-    border-left: 5px solid #f7a0b1;
-    &:after {
-      content: "";
-    }
-  }
+  ${SiteSpecific};
 `;

@@ -11,7 +11,7 @@ consistent visual system for UI development.
 
 ## Primary colors
 
-<div class="doc flex-column">
+<div class="markdown flex-column">
   <div class="flex layout-30">
     <div class="color-block" style="background-color: #2E008B;">Dark Blue 900</div>
     <div>
@@ -51,64 +51,43 @@ consistent visual system for UI development.
 
 ### Dark Blue
 
-<div class="doc">
+<div class="markdown">
   <div class="flex flex-full">
-    <div class="color-palette-block white" style="background-color: #2E008B;">Dark Blue 900</div>
+    <div class="color-palette-block white" style="background-color: #2E008B;">Dark Blue 500</div>
     <div class="color-palettes">
       <div class="color-palette">
         <input type="radio" id="dk-1" name="color-dk" checked/>
-        <label for="dk-1" style="background-color: #F5F2F9;">Dark Blue 20</label>
+        <label for="dk-1" style="background-color: #766E89;" class="white">Dark Blue 100</label>
         <div class="color-content color-content-dk-1">
-          <p><strong>Dark Blue 20</strong></p>
+          <span class="badges"><span>AA</span><span class="red">AAA</span></span>
+          <p><strong>Dark Blue 100</strong></p>
           <p>
           <span>Hex</span>
-          <span>#F5F2F9</span>
+          <span>#766E89</span>
           </p>
           <p>
             <span>Sass</span>
-            <span>$Color-dark-blue--20</span>
+            <span>$Color-dark-blue--100</span>
           </p>
           <p>
             <span>JavaScript</span>
-            <span>COLOR_DARK_BLUE_20</span>
+            <span>COLOR_DARK_BLUE_100</span>
           </p>
           <p>
             <span>CSS</span>
-            <span>--color-dark-blue--20</span>
+            <span>--color-dark-blue--100</span>
           </p>
         </div>
       </div>
       <div class="color-palette">
         <input type="radio" id="dk-2" name="color-dk"/>
-        <label for="dk-2" style="background-color: #DBCCE7;">Dark Blue 80</label>
+        <label for="dk-2" style="background-color: #5C468B;" class="white">Dark Blue 200</label>
         <div class="color-content color-content-dk-2">
-          <p><strong>Dark Blue 80</strong></p>
-          <p>
-          <span>Hex</span>
-          <span>#DBCCE7</span>
-          </p>
-          <p>
-            <span>Sass</span>
-            <span>$Color-dark-blue--80</span>
-          </p>
-          <p>
-            <span>JavaScript</span>
-            <span>COLOR_DARK_BLUE_80</span>
-          </p>
-          <p>
-            <span>CSS</span>
-            <span>--color-dark-blue--80</span>
-          </p>
-        </div>
-      </div>
-      <div class="color-palette">
-        <input type="radio" id="dk-3" name="color-dk"/>
-        <label for="dk-3" style="background-color: #B499D0;">Dark Blue 200</label>
-        <div class="color-content color-content-dk-3">
+          <span class="badges"><span>AA</span><span>AAA</span></span>
           <p><strong>Dark Blue 200</strong></p>
           <p>
           <span>Hex</span>
-          <span>#B499D0</span>
+          <span>#5C468B</span>
           </p>
           <p>
             <span>Sass</span>
@@ -125,59 +104,87 @@ consistent visual system for UI development.
         </div>
       </div>
       <div class="color-palette">
-        <input type="radio" id="dk-4" name="color-dk"/>
-        <label for="dk-4" style="background-color: #825DB5;" class="white">Dark Blue 400</label>
-        <div class="color-content color-content-dk-4">
-          <p><strong>Dark Blue 400</strong></p>
+        <input type="radio" id="dk-3" name="color-dk"/>
+        <label for="dk-3" style="background-color: #4A2A8B;" class="white">Dark Blue 300</label>
+        <div class="color-content color-content-dk-3">
+          <span class="badges"><span>AA</span><span>AAA</span></span>
+          <p><strong>Dark Blue 300</strong></p>
           <p>
           <span>Hex</span>
-          <span>#825DB5</span>
+          <span>#4A2A8B</span>
           </p>
           <p>
             <span>Sass</span>
-            <span>$Color-dark-blue--400</span>
+            <span>$Color-dark-blue--300</span>
           </p>
           <p>
             <span>JavaScript</span>
-            <span>COLOR_DARK_BLUE_400</span>
+            <span>COLOR_DARK_BLUE_300</span>
           </p>
           <p>
             <span>CSS</span>
-            <span>--color-dark-blue--400</span>
+            <span>--color-dark-blue--300</span>
+          </p>
+        </div>
+      </div>
+      <div class="color-palette">
+        <input type="radio" id="dk-4" name="color-dk"/>
+        <label for="dk-4" style="background-color: #2E008B;" class="white">Dark Blue 500</label>
+        <div class="color-content color-content-dk-4">
+          <span class="badges"><span>AA</span><span>AAA</span></span>
+          <p><strong>Dark Blue 500</strong></p>
+          <p>
+          <span>Hex</span>
+          <span>#2E008B</span>
+          </p>
+          <p>
+            <span>Sass</span>
+            <span>$Color-dark-blue--500</span>
+          </p>
+          <p>
+            <span>JavaScript</span>
+            <span>COLOR_DARK_BLUE_500</span>
+          </p>
+          <p>
+            <span>CSS</span>
+            <span>--color-dark-blue--500</span>
           </p>
         </div>
       </div>
       <div class="color-palette">
         <input type="radio" id="dk-5" name="color-dk"/>
-        <label for="dk-5" style="background-color: #4F269C;" class="white">Dark Blue 700</label>
+        <label for="dk-5" style="background-color: #290080;" class="white">Dark Blue 800</label>
         <div class="color-content color-content-dk-5">
-          <p><strong>Dark Blue 700</strong></p>
+          <span class="badges"><span>AA</span><span class="red">AAA</span></span>
+          <span class="badges"><span>AA</span><span>AAA</span></span>
+          <p><strong>Dark Blue 800</strong></p>
           <p>
           <span>Hex</span>
-          <span>#4F269C</span>
+          <span>#290080</span>
           </p>
           <p>
             <span>Sass</span>
-            <span>$Color-dark-blue--700</span>
+            <span>$Color-dark-blue--800</span>
           </p>
           <p>
             <span>JavaScript</span>
-            <span>COLOR_DARK_BLUE_700</span>
+            <span>COLOR_DARK_BLUE_800</span>
           </p>
           <p>
             <span>CSS</span>
-            <span>--color-dark-blue--700</span>
+            <span>--color-dark-blue--800</span>
           </p>
         </div>
       </div>
       <div class="color-palette">
         <input type="radio" id="dk-6" name="color-dk"/>
-        <label for="dk-6" style="background-color: #2E008B;" class="white">Dark Blue 900</label>
+        <label for="dk-6" style="background-color: #19004D;" class="white">Dark Blue 900</label>
         <div class="color-content color-content-dk-6">
+          <span class="badges"><span>AA</span><span>AAA</span></span>
           <p><strong>Dark Blue 900</strong></p>
           <p>
           <span>Hex</span>
-          <span>#2E008B</span>
+          <span>#19004D</span>
           </p>
           <p>
             <span>Sass</span>
@@ -200,41 +207,19 @@ consistent visual system for UI development.
 
 ### Magenta
 
-<div class="doc">
+<div class="markdown">
   <div class="flex flex-full">
-    <div class="color-palette-block white" style="background-color: #EC008C;">Magenta 700</div>
+    <div class="color-palette-block white" style="background-color: #EC008C;">Magenta 500</div>
     <div class="color-palettes">
       <div class="color-palette">
         <input type="radio" id="mg-1" name="color-mg" checked/>
-        <label for="mg-1" style="background-color: #FDE9EA;">Magenta 20</label>
+        <label for="mg-1" style="background-color: #ECA5CF;">Magenta 100</label>
         <div class="color-content color-content-mg-1">
-          <p><strong>Magenta 20</strong></p>
-          <p>
-          <span>Hex</span>
-          <span>#FDE9EA</span>
-          </p>
-          <p>
-            <span>Sass</span>
-            <span>$Color-magenta--20</span>
-          </p>
-          <p>
-            <span>JavaScript</span>
-            <span>COLOR_Magenta_20</span>
-          </p>
-          <p>
-            <span>CSS</span>
-            <span>--color-magenta--20</span>
-          </p>
-        </div>
-      </div>
-      <div class="color-palette">
-        <input type="radio" id="mg-2" name="color-mg"/>
-        <label for="mg-2" style="background-color: #F7A0B1;">Magenta 100</label>
-        <div class="color-content color-content-mg-2">
+          <span class="badges"><span>AA</span><span>AAA</span></span>
           <p><strong>Magenta 100</strong></p>
           <p>
           <span>Hex</span>
-          <span>#F7A0B1</span>
+          <span>#ECA5CF</span>
           </p>
           <p>
             <span>Sass</span>
@@ -251,59 +236,86 @@ consistent visual system for UI development.
         </div>
       </div>
       <div class="color-palette">
-        <input type="radio" id="mg-3" name="color-mg"/>
-        <label for="mg-3" style="background-color: #F1509C;">Magenta 400</label>
-        <div class="color-content color-content-mg-3">
-          <p><strong>Magenta 400</strong></p>
+        <input type="radio" id="mg-2" name="color-mg"/>
+        <label for="mg-2" style="background-color: #EC76BC;">Magenta 200</label>
+        <div class="color-content color-content-mg-2">
+          <span class="badges"><span>AA</span><span>AAA</span></span>
+          <p><strong>Magenta 200</strong></p>
           <p>
           <span>Hex</span>
-          <span>#F1509C</span>
+          <span>#EC76BC</span>
           </p>
           <p>
             <span>Sass</span>
-            <span>$Color-magenta--400</span>
+            <span>$Color-magenta--200</span>
           </p>
           <p>
             <span>JavaScript</span>
-            <span>COLOR_Magenta_400</span>
+            <span>COLOR_Magenta_200</span>
           </p>
           <p>
             <span>CSS</span>
-            <span>--color-magenta--400</span>
+            <span>--color-magenta--200</span>
+          </p>
+        </div>
+      </div>
+      <div class="color-palette">
+        <input type="radio" id="mg-3" name="color-mg"/>
+        <label for="mg-3" style="background-color: #EC47A9;">Magenta 300</label>
+        <div class="color-content color-content-mg-3">
+          <span class="badges"><span>AA</span><span class="red">AAA</span></span>
+          <p><strong>Magenta 300</strong></p>
+          <p>
+          <span>Hex</span>
+          <span>#EC47A9</span>
+          </p>
+          <p>
+            <span>Sass</span>
+            <span>$Color-magenta--300</span>
+          </p>
+          <p>
+            <span>JavaScript</span>
+            <span>COLOR_Magenta_300</span>
+          </p>
+          <p>
+            <span>CSS</span>
+            <span>--color-magenta--300</span>
           </p>
         </div>
       </div>
       <div class="color-palette">
         <input type="radio" id="mg-4" name="color-mg"/>
-        <label for="mg-4" style="background-color: #EC008C;" class="white">Magenta 700</label>
+        <label for="mg-4" style="background-color: #EC008C;" class="white">Magenta 500</label>
         <div class="color-content color-content-mg-5">
-          <p><strong>Magenta 700</strong></p>
+          <span class="badges"><span>AA</span><span>AAA</span></span>
+          <p><strong>Magenta 500</strong></p>
           <p>
           <span>Hex</span>
           <span>#EC008C</span>
           </p>
           <p>
             <span>Sass</span>
-            <span>$Color-magenta--700</span>
+            <span>$Color-magenta--500</span>
           </p>
           <p>
             <span>JavaScript</span>
-            <span>COLOR_Magenta_700</span>
+            <span>COLOR_Magenta_500</span>
           </p>
           <p>
             <span>CSS</span>
-            <span>--color-magenta--700</span>
+            <span>--color-magenta--500</span>
           </p>
         </div>
       </div>
       <div class="color-palette">
         <input type="radio" id="mg-5" name="color-mg"/>
-        <label for="mg-5" style="background-color: #7D002C;" class="white">Magenta 800</label>
+        <label for="mg-5" style="background-color: #80004C;" class="white">Magenta 800</label>
         <div class="color-content color-content-mg-4">
+          <span class="badges"><span>AA</span><span>AAA</span></span>
           <p><strong>Magenta 800</strong></p>
           <p>
           <span>Hex</span>
-          <span>#7D002C</span>
+          <span>#80004C</span>
           </p>
           <p>
             <span>Sass</span>
@@ -321,12 +333,13 @@ consistent visual system for UI development.
       </div>
       <div class="color-palette">
         <input type="radio" id="mg-6" name="color-mg"/>
-        <label for="mg-6" style="background-color: #300001;" class="white">Magenta 900</label>
+        <label for="mg-6" style="background-color: #4D002D;" class="white">Magenta 900</label>
         <div class="color-content color-content-mg-6">
+          <span class="badges"><span>AA</span><span>AAA</span></span>
           <p><strong>Magenta 900</strong></p>
           <p>
           <span>Hex</span>
-          <span>#300001</span>
+          <span>#4D002D</span>
           </p>
           <p>
             <span>Sass</span>
@@ -349,64 +362,43 @@ consistent visual system for UI development.
 
 ### Cyan
 
-<div class="doc">
+<div class="markdown">
   <div class="flex flex-full">
-    <div class="color-palette-block white" style="background-color: #00B6ED;">Cyan 300</div>
+    <div class="color-palette-block white" style="background-color: #00B6ED;">Cyan 500</div>
     <div class="color-palettes">
       <div class="color-palette">
         <input type="radio" id="cy-1" name="color-cy" checked/>
-        <label for="cy-1" style="background-color: #CCE3FB;">Cyan 50</label>
+        <label for="cy-1" style="background-color: #A6DCED;">Cyan 100</label>
         <div class="color-content color-content-cy-1">
-          <p><strong>Cyan 50</strong></p>
+          <span class="badges"><span>AA</span><span>AAA</span></span>
+          <p><strong>Cyan 100</strong></p>
           <p>
           <span>Hex</span>
-          <span>#CCE3FB</span>
+          <span>#A6DCED</span>
           </p>
           <p>
             <span>Sass</span>
-            <span>$Color-cyan--50</span>
+            <span>$Color-cyan--100</span>
           </p>
           <p>
             <span>JavaScript</span>
-            <span>COLOR_CYAN_50</span>
+            <span>COLOR_CYAN_100</span>
           </p>
           <p>
             <span>CSS</span>
-            <span>--color-cyan--50</span>
+            <span>--color-cyan--100</span>
           </p>
         </div>
       </div>
       <div class="color-palette">
         <input type="radio" id="cy-2" name="color-cy"/>
-        <label for="cy-2" style="background-color: #91C9F7;">Cyan 80</label>
+        <label for="cy-2" style="background-color: #76D1ED;">Cyan 200</label>
         <div class="color-content color-content-cy-2">
-          <p><strong>Cyan 80</strong></p>
-          <p>
-          <span>Hex</span>
-          <span>#91C9F7</span>
-          </p>
-          <p>
-            <span>Sass</span>
-            <span>$Color-cyan--80</span>
-          </p>
-          <p>
-            <span>JavaScript</span>
-            <span>COLOR_CYAN_80</span>
-          </p>
-          <p>
-            <span>CSS</span>
-            <span>--color-cyan--80</span>
-          </p>
-        </div>
-      </div>
-      <div class="color-palette">
-        <input type="radio" id="cy-3" name="color-cy"/>
-        <label for="cy-3" style="background-color: #41B9F1;">Cyan 200</label>
-        <div class="color-content color-content-cy-3">
+          <span class="badges"><span>AA</span><span>AAA</span></span>
           <p><strong>Cyan 200</strong></p>
           <p>
           <span>Hex</span>
-          <span>#41B9F1</span>
+          <span>#76D1ED</span>
           </p>
           <p>
             <span>Sass</span>
@@ -423,13 +415,14 @@ consistent visual system for UI development.
         </div>
       </div>
       <div class="color-palette">
-        <input type="radio" id="cy-4" name="color-cy"/>
-        <label for="cy-4" style="background-color: #00B6ED;" class="white">Cyan 300</label>
-        <div class="color-content color-content-cy-4">
+        <input type="radio" id="cy-3" name="color-cy"/>
+        <label for="cy-3" style="background-color: #47C6ED;">Cyan 300</label>
+        <div class="color-content color-content-cy-3">
+          <span class="badges"><span>AA</span><span>AAA</span></span>
           <p><strong>Cyan 300</strong></p>
           <p>
           <span>Hex</span>
-          <span>#00B6ED</span>
+          <span>#47C6ED</span>
           </p>
           <p>
             <span>Sass</span>
@@ -446,36 +439,62 @@ consistent visual system for UI development.
         </div>
       </div>
       <div class="color-palette">
-        <input type="radio" id="cy-5" name="color-cy"/>
-        <label for="cy-5" style="background-color: #00678E;" class="white">Cyan 600</label>
-        <div class="color-content color-content-cy-5">
-          <p><strong>Cyan 600</strong></p>
+        <input type="radio" id="cy-4" name="color-cy"/>
+        <label for="cy-4" style="background-color: #00B6ED;" class="white">Cyan 500</label>
+        <div class="color-content color-content-cy-4">
+          <span class="badges"><span>AA</span><span>AAA</span></span>
+          <p><strong>Cyan 500</strong></p>
           <p>
           <span>Hex</span>
-          <span>#00678E</span>
+          <span>#00B6ED</span>
           </p>
           <p>
             <span>Sass</span>
-            <span>$Color-cyan--600</span>
+            <span>$Color-cyan--500</span>
           </p>
           <p>
             <span>JavaScript</span>
-            <span>COLOR_CYAN_600</span>
+            <span>COLOR_CYAN_500</span>
           </p>
           <p>
             <span>CSS</span>
-            <span>--color-cyan--600</span>
+            <span>--color-cyan--500</span>
+          </p>
+        </div>
+      </div>
+      <div class="color-palette">
+        <input type="radio" id="cy-5" name="color-cy"/>
+        <label for="cy-5" style="background-color: #006280;" class="white">Cyan 800</label>
+        <div class="color-content color-content-cy-5">
+          <span class="badges"><span>AA</span><span class="red">AAA</span></span>
+          <p><strong>Cyan 800</strong></p>
+          <p>
+          <span>Hex</span>
+          <span>#006280</span>
+          </p>
+          <p>
+            <span>Sass</span>
+            <span>$Color-cyan--800</span>
+          </p>
+          <p>
+            <span>JavaScript</span>
+            <span>COLOR_CYAN_800</span>
+          </p>
+          <p>
+            <span>CSS</span>
+            <span>--color-cyan--800</span>
           </p>
         </div>
       </div>
       <div class="color-palette">
         <input type="radio" id="cy-6" name="color-cy"/>
-        <label for="cy-6" style="background-color: #002939;" class="white">Cyan 800</label>
+        <label for="cy-6" style="background-color: #003B4D;" class="white">Cyan 900</label>
         <div class="color-content color-content-cy-6">
-          <p><strong>Cyan 800</strong></p>
+          <span class="badges"><span>AA</span><span>AAA</span></span>
+          <p><strong>Cyan 900</strong></p>
           <p>
           <span>Hex</span>
-          <span>#002939</span>
+          <span>#003B4D</span>
           </p>
           <p>
             <span>Sass</span>
@@ -500,7 +519,7 @@ consistent visual system for UI development.
 
 #### Our spacing tokens make it easy to add padding, margins, and position coordinates. Start with an 8px grid, so that our spacing options are set in multiples of 8 (ie, 8, 16, 24, 32, etc).
 
-<div class="doc flex" style="justify-content: flex-start; text-align: center;">
+<div class="markdown flex" style="justify-content: flex-start; text-align: center;">
   <div class="flex flex-column">
     <span class="space" style="width: 8px;"></span>
     <span>8px</span>
@@ -528,8 +547,8 @@ consistent visual system for UI development.
 
 ## Responsive Type Scale
 
-When working with different type styles it’s important to adhere to the type scale at all times. 
-Never introduce a new type size. Below are some standards for the web we’ve defined to help 
+When working with different type styles it’s important to adhere to the type scale at all times.
+Never introduce a new type size. Below are some standards for the web we’ve defined to help
 you get started using the correct sizes for your content.
 
 ### Example: resize the screen width to view the change</span>
@@ -540,7 +559,7 @@ you get started using the correct sizes for your content.
       <h1 style="margin: 0;">H1. Cras sed cursus lectus.</h1>
       <span>&nbsp;</span>
     </div>
-    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est
       nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
   </div>
   <div>
@@ -549,7 +568,7 @@ you get started using the correct sizes for your content.
       <h2 style="margin: 0;">H2. Cras sed cursus lectus.</h2>
       <span>&nbsp;</span>
     </div>
-    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est
       nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
   </div>
   <div>
@@ -558,16 +577,16 @@ you get started using the correct sizes for your content.
       <h3 style="margin: 0;">H3. Cras sed cursus lectus.</h3>
       <span>&nbsp;</span>
     </div>
-    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est
       nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
-  </div>  
+  </div>
   <div>
     <div class="type-scale-bar-text flex" style="flex-direction: column;">
       <span>&nbsp;</span>
       <h4 style="margin: 0;">H4. Cras sed cursus lectus.</h4>
       <span>&nbsp;</span>
     </div>
-    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est
       nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
   </div>
   <div>
@@ -576,7 +595,7 @@ you get started using the correct sizes for your content.
       <h5 style="margin: 0;">H5. Cras sed cursus lectus.</h5>
       <span>&nbsp;</span>
     </div>
-    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est
       nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
   </div>
   <div>
@@ -585,7 +604,7 @@ you get started using the correct sizes for your content.
       <h6 style="margin: 0;">H6. Cras sed cursus lectus.</h6>
       <span>&nbsp;</span>
     </div>
-    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est 
+    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est
       nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
   </div>
 </div>

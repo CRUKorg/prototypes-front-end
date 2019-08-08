@@ -1,6 +1,4 @@
-/* eslint-disable */
 import styled from 'styled-components';
-import MEDIA from 'helpers/mediaTemplates';
 
 export const Container = styled.div`
   max-width: 1400px;
@@ -19,9 +17,22 @@ export const MainTitle = styled.h1`
 `;
 
 export const MainBanner = styled.div`
-  background: 
-  repeating-linear-gradient(90deg, #f0f0f0 0, #f0f0f0 5%, transparent 0, transparent 50%) 0 / 15px 15px,
-  repeating-linear-gradient(180deg, #f0f0f0 0, #f0f0f0 5%, transparent 0, transparent 50%) 0 / 15px 15px;
+  background: repeating-linear-gradient(
+        90deg,
+        #f0f0f0 0,
+        #f0f0f0 5%,
+        transparent 0,
+        transparent 50%
+      )
+      0 / 15px 15px,
+    repeating-linear-gradient(
+        180deg,
+        #f0f0f0 0,
+        #f0f0f0 5%,
+        transparent 0,
+        transparent 50%
+      )
+      0 / 15px 15px;
 `;
 
 export const ContentWrapper = styled.div`
@@ -33,4 +44,3 @@ export const ContentWrapper = styled.div`
     margin-top: 10px;
   }
 `;
-
