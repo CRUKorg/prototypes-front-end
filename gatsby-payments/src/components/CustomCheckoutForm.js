@@ -52,6 +52,19 @@ const StyledLegend = styled.legend`
   font-family: MuseoSans-500, Calibri, Arial, sans-serif;
 `;
 
+const StyledButtonGroup = styled.div`
+  display: flex;
+`;
+
+const StyledButton = styled(Button)`
+  flex: 1;
+`;
+
+const StyledImage = styled.img`
+  width: 220px;
+  float: right;
+`;
+
 class CustomCheckoutForm extends React.Component {
   constructor(props) {
     super(props);
@@ -120,8 +133,8 @@ class CustomCheckoutForm extends React.Component {
           <Form>
             <StyledFieldset>
               <StyledLegend>Donation amount</StyledLegend>
-              <div>
-                <Button
+              <StyledButtonGroup>
+                <StyledButton
                   type="button"
                   appearance={
                     values.donationAmount === 20 ? "primary" : "defailt"
@@ -129,8 +142,8 @@ class CustomCheckoutForm extends React.Component {
                   onClick={() => setFieldValue("donationAmount", 20)}
                 >
                   £20
-                </Button>
-                <Button
+                </StyledButton>
+                <StyledButton
                   type="button"
                   appearance={
                     values.donationAmount === 50 ? "primary" : "defailt"
@@ -138,8 +151,8 @@ class CustomCheckoutForm extends React.Component {
                   onClick={() => setFieldValue("donationAmount", 50)}
                 >
                   £50
-                </Button>
-                <Button
+                </StyledButton>
+                <StyledButton
                   type="button"
                   appearance={
                     values.donationAmount === 100 ? "primary" : "defailt"
@@ -147,8 +160,8 @@ class CustomCheckoutForm extends React.Component {
                   onClick={() => setFieldValue("donationAmount", 100)}
                 >
                   £100
-                </Button>
-              </div>
+                </StyledButton>
+              </StyledButtonGroup>
               <TextField
                 label="Other amount"
                 extraLeft="£"
@@ -212,19 +225,21 @@ class CustomCheckoutForm extends React.Component {
               <StyledLegend>How would you like to donate?</StyledLegend>
               <div>
                 <Radio
-                  name="paymentType <img src="//d77hrzbdrgc46.cloudfront.net//assets/T8PCRa4zh5i-OmXj1wYoow==/themes/cruk/campaign/images/credit-debit-card.png" alt="Pay with Credit/Debit cards">"
+                  name="paymentType"
                   onChange={() => setFieldValue("paymentType", "card")}
                   value="card"
                   checked={values.paymentType === "card"}
                 >
-                  Credit/Debit card <img src="//d77hrzbdrgc46.cloudfront.net//assets/T8PCRa4zh5i-OmXj1wYoow==/themes/cruk/campaign/images/credit-debit-card.png" alt="Pay with Credit/Debit cards" />
+                  Credit/Debit card <StyledImage src="//d77hrzbdrgc46.cloudfront.net//assets/T8PCRa4zh5i-OmXj1wYoow==/themes/cruk/campaign/images/credit-debit-card.png" alt="Pay with Credit/Debit cards" />
                 </Radio>
                 <Radio
                   name="paymentType"
                   onChange={() => setFieldValue("paymentType", "payPal")}
                   value="PayPal"
                   checked={values.paymentType === "payPal"}
-                />
+                >
+                  PayPal <StyledImage src="//d77hrzbdrgc46.cloudfront.net//assets/T8PCRa4zh5i-OmXj1wYoow==/themes/cruk/campaign/images/paypal.png" alt="Pay with PayPal" style={{width: "40px"}}/>
+                </Radio>
               </div>
               {values.paymentType === "payPal" && (
                 <Button
