@@ -31,7 +31,20 @@ export const SiteSpecific = css`
   blockquote p {
     display: inline;
   }
-
+  code {
+    font-feature-settings: normal;
+    font-family: ibm-plex-mono, Menlo, Monaco, OperatorMono-Book, Inconsolata,
+      monospace;
+    background-color: rgb(243, 244, 244);
+    display: inline-block;
+    overflow-wrap: normal;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+  code {
+    font-size: 0.75em;
+    line-height: 1.5;
+  }
   table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -235,4 +248,104 @@ export const SiteSpecific = css`
       display: block;
     }
   `};
+  .do-dont {
+    margin-top: 32px;
+    li {
+      border-radius: 3px;
+      border: 1px solid #dee1e1;
+      border-top: none;
+      flex-basis: calc(50% - 16px);
+      list-style: none;
+      margin-bottom: 32px;
+      position: relative;
+      padding: 28px 24px 24px;
+    }
+    li:before {
+      content: '';
+      height: 12px;
+      position: absolute;
+      top: 0;
+      left: -1px;
+      right: -1px;
+      border-radius: 3px 3px 0 0;
+    }
+    li.do:before {
+      background: #59cb59;
+    }
+    li.dont:before {
+      background: #db3e3e;
+    }
+  }
+  ${MEDIA.MIN_DESKTOP`
+    .do-dont {
+      display: flex;
+      justify-content: space-evenly;
+      width: 80%;
+      li {
+        max-width: 40%;
+      }
+    }
+  `};
+  .keyboard-navigation {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    margin-bottom: 3.25rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .keyboard-navigation tr {
+    border-bottom: 1px solid rgb(200, 204, 204);
+  }
+  .keyboard-navigation td,
+  .keyboard-navigation th {
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+  }
+  th:first-child,
+  td:first-child {
+    padding-left: 0px;
+  }
+  td,
+  th {
+    text-align: left;
+    font-feature-settings: 'tnum';
+    padding-left: 1.08333rem;
+    padding-right: 1.08333rem;
+    padding-top: 0.8125rem;
+    padding-bottom: calc(0.8125rem - 1px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  th {
+    font-weight: 700;
+  }
+  .keybutton {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: ibm-plex-mono, Menlo, Monaco, OperatorMono-Book, Inconsolata,
+      monospace;
+    display: inline-block;
+    background-color: rgb(22, 32, 32);
+    color: rgb(255, 255, 255);
+    padding: 4px 8px;
+    border-radius: 4px;
+    border-bottom: 2px solid rgb(81, 94, 95);
+  }
 `;

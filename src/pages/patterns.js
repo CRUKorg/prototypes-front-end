@@ -16,7 +16,7 @@ const Patterns = ({ data }) => (
   <Layout>
     <Head pageTitle={data.patternsJson.title} />
     <Flex>
-      <Sidebar />
+      <Sidebar cat="patterns"/>
       <Box>
         <StyledBox>
           <div

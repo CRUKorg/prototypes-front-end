@@ -38,9 +38,41 @@ const DesignNav = (
   </ul>
 );
 
+const PatternNav = (
+  <ul>
+    <li>
+      <span>Patterns & Guides</span>
+    </li>
+    <li>
+      <span>Accessibility</span>
+      <ul>
+        <li>
+          <span>Accessibility compliance goals</span>
+        </li>
+        <li>
+          <span>Best practices</span>
+        </li>
+        <li>
+          <span>Accessible by design</span>
+        </li>
+        <li>
+          <span>Keyboard navigation</span>
+        </li>
+        <li>
+          <span>Expected Keyboard Navigation Interactions</span>
+        </li>
+        <li>
+          <span>Resources</span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+);
 const Sidebar = ({ cat }) => (
   <SideNav>
-    {cat === 'design' ? DesignNav : (<ul><li><span>{cat}</span></li></ul>)}
+    {cat === 'design' && DesignNav}
+    {cat === 'patterns' && PatternNav}
+    {!cat && (<ul><li><span>{cat}</span></li></ul>)}
   </SideNav>
 );
 
