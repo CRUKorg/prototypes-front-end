@@ -553,59 +553,46 @@ you get started using the correct sizes for your content.
 
 ### Example: resize the screen width to view the change</span>
 <div class="type-scale">
-  <div>
-    <div class="type-scale-bar-text flex" style="flex-direction: column;">
-      <span>&nbsp;</span>
-      <h1 style="margin: 0;">H1. Cras sed cursus lectus.</h1>
-      <span>&nbsp;</span>
-    </div>
-    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est
-      nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  <div class="type-scale-row">
+    <span class="type-scale-text">
+      <span class="desktop-only">1.912em (31px)</span>
+      <span class="mobile-only">1.616em (26px)</span>
+    </span>
+    <h1>H1. Cras sed cursus lectus.</h1>
   </div>
-  <div>
-    <div class="type-scale-bar-text flex" style="flex-direction: column;">
-      <span>&nbsp;</span>
-      <h2 style="margin: 0;">H2. Cras sed cursus lectus.</h2>
-      <span>&nbsp;</span>
-    </div>
-    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est
-      nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  <div class="type-scale-row">
+    <span class="type-scale-text">
+      <span class="desktop-only">1.616em (26px)</span>
+      <span class="mobile-only">1.471em (24px)</span>
+    </span>
+    <h2>H2. Cras sed cursus lectus.</h2>
   </div>
-  <div>
-    <div class="type-scale-bar-text flex" style="flex-direction: column;">
-      <span>&nbsp;</span>
-      <h3 style="margin: 0;">H3. Cras sed cursus lectus.</h3>
-      <span>&nbsp;</span>
-    </div>
-    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est
-      nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  <div class="type-scale-row">
+    <span class="type-scale-text">
+      <span class="desktop-only">1.471em (24px)</span>
+      <span class="mobile-only">1.3em (21px)</span>
+    </span>
+    <h3>H3. Cras sed cursus lectus.</h3>
   </div>
-  <div>
-    <div class="type-scale-bar-text flex" style="flex-direction: column;">
-      <span>&nbsp;</span>
-      <h4 style="margin: 0;">H4. Cras sed cursus lectus.</h4>
-      <span>&nbsp;</span>
-    </div>
-    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est
-      nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  <div class="type-scale-row">
+    <span class="type-scale-text">
+      <span class="desktop-only">1.3em (21px)</span>
+      <span class="mobile-only">1.243em (20px)</span>
+    </span>
+    <h4>H4. Cras sed cursus lectus.</h4>
   </div>
-  <div>
-    <div class="type-scale-bar-text flex" style="flex-direction: column;">
-      <span>&nbsp;</span>
-      <h5 style="margin: 0;">H5. Cras sed cursus lectus.</h5>
-      <span>&nbsp;</span>
-    </div>
-    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est
-      nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  <div class="type-scale-row">
+    <span class="type-scale-text">
+      <span class="desktop-only">1.243em (20px)</span>
+      <span class="mobile-only">1.132em (18px)</span>
+    </span>
+    <h5>H5. Cras sed cursus lectus.</h5>
   </div>
-  <div>
-    <div class="type-scale-bar-text flex" style="flex-direction: column;">
-      <span>&nbsp;</span>
-      <h6 style="margin: 0;">H6. Cras sed cursus lectus.</h6>
-      <span>&nbsp;</span>
-    </div>
-    <p>Paragraph. Praesent nulla urna, iaculis et leo sed, bibendum euismod orci. Vestibulum dapibus consequat ornare. Etiam id est
-      nec orci porta finibus at non erat. Phasellus sit amet efficitur lorem.</p>
+  <div class="type-scale-row">
+    <span class="type-scale-text">
+      <span>1.132em (18px)</span>
+    </span>
+    <h6>H6. Cras sed cursus lectus.</h6>
   </div>
 </div>
 <p>&nbsp;</p>

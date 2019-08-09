@@ -4,6 +4,8 @@
  */
 import { css } from 'styled-components';
 import { accent } from 'constants/theme';
+import { COLORS } from 'constants/constants';
+import MEDIA from 'helpers/mediaTemplates';
 
 export const SiteSpecific = css`
   ol,
@@ -169,23 +171,27 @@ export const SiteSpecific = css`
     height: 100px;
   }
   .type-scale {
-    width: 80%;
-    padding: 20px;
-    border: 2px solid #f3f4f4;
-    border-radius: 4px;
-  }
-  .type-scale-bar-text {
-    height: 100%;
-    margin-bottom: 16px;
-  }
-  .type-scale-bar-text span {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-left: 5px solid #f7a0b1;
-    &:after {
-      content: '';
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: ${COLORS.primary};
     }
+  }
+  .type-scale-row {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid ${COLORS.grayDark};
+    width: 95%;
+  }
+  .type-scale-text {
+    margin-right: 20px;
+    font-size: 12px;
+    color: ${COLORS.grayDark};
+    display: block;
+    width: 90px;
   }
   .badges {
     display: flex;
@@ -215,4 +221,18 @@ export const SiteSpecific = css`
       background-color: #a81616;
     }
   }
+  .mobile-only {
+    display: block;
+  }
+  .desktop-only {
+    display: none;
+  }
+  ${MEDIA.MIN_DESKTOP`
+    .mobile-only {
+      display: none;
+    }
+    .desktop-only {
+      display: block;
+    }
+  `};
 `;

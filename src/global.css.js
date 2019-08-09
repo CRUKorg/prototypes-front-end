@@ -65,30 +65,31 @@ export default createGlobalStyle`
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
+  /* 
+  Modular scale located at: https://www.modularscale.com/?1,1140,12&em&1.3
+  PX to EM: https://all-markup-news.com/px-to-em/
+  */
   h1, h2, h3, h4, h5, h6 {
     font-family: ${TYPOGRAPHY.fontFamilyHeadings};
     font-weight: ${TYPOGRAPHY.fontWeightMedium};
-    margin-top: 0;
-    margin-bottom: ${UTILITIES.rhythmVerticalBase};
     max-width: 100%;
     margin: calc(12px + 1.05vw) 0;
   }
   h4, h5, h6 {
-    line-height: calc(18px + .2vw); 
+    line-height: calc(18px + .2vw);
   }
-  h1 { font-size: 1.4375rem; line-height: calc(18px + 1.8vw); }
-  h2 { font-size: 1.1875rem; line-height: calc(18px + 1vw); }
-  h3 { font-size: 1rem; line-height: calc(18px + .7vw); }
-  h4 { font-size: 0.875rem;  }
-  h5 { font-size: 0.875rem;  }
-  h6 { font-size: 0.75rem;   }
+  h1 { font-size: 1.912em; line-height: calc(18px + 1.8vw); }
+  h2 { font-size: 1.616em; line-height: calc(18px + 1vw); }
+  h3 { font-size: 1.471em; line-height: calc(18px + .7vw); }
+  h4 { font-size: 1.3em; }
+  h5 { font-size: 1.243em; }
+  h6 { font-size: 1.132em; }
   ${MEDIA.MIN_DESKTOP`
-    h1 { font-size: 2rem; } 
-    h2 { font-size: 1.4375rem; } 
-    h3 { font-size: 1.1875rem; } 
-    h4 { font-size: 1rem; } 
-    h5 { font-size: 1rem; } 
-    h6 { font-size: 0.875rem; } 
+    h1 { font-size: 1.616em; }
+    h2 { font-size: 1.471em; }
+    h3 { font-size: 1.3em; }
+    h4 { font-size: 1.243em; }
+    h5, h6 { font-size: 1.132em; }
   `};
   
   p {
