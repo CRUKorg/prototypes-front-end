@@ -1,8 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   max-width: 1400px;
   margin: 0 auto;
+  width: 100%;
 `;
 
 export const MainTitle = styled.h1`

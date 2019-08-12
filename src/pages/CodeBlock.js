@@ -1,19 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-import { MDXProvider } from '@mdx-js/react';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import styled from 'styled-components';
-import Layout from 'components/layout';
-import Box from 'components/box';
-import BoxExample from 'components/box/box.css';
-import Flex from 'components/flex/flex';
-import Head from 'components/head';
-import Sidebar from 'components/header/sidebar/sidebar';
-import Live from '../../content/components/live.mdx';
 
-const StyledBox = styled.div`
-  padding: 20px 2% 0;
-`;
 const StyledLiveEditor = styled(LiveEditor)`
   background-color: rgb(54, 65, 65);
   caret-color: rgb(176, 182, 183);
@@ -46,9 +36,6 @@ const StyledLiveEditor = styled(LiveEditor)`
   }
 `;
 
-const StyledPre = styled.div`
-  max-width: 60%;
-`;
 const StyledLivePreview = styled(LivePreview)`
   overflow-wrap: break-word;
   color: inherit;
@@ -63,41 +50,42 @@ const StyledLivePreview = styled(LivePreview)`
   border-radius: 4px 4px 0px 0px;
 `;
 
-const Components = ({ children }) => {
+const CodeBlock = ({ children, className, live }) => {
+  const language = className.replace(/language-/, '');
+
+  if (live) {
+    return (
+      <div>
+        <LiveProvider code={children}>
+          <StyledLivePreview />
+          <StyledLiveEditor />
+          <LiveError />
+        </LiveProvider>
+      </div>
+    );
+  }
+
   return (
-    <Layout>
-      <Head pageTitle="Components" />
-      <Flex>
-        <Sidebar />
-        <MDXProvider
-          components={{
-            wrapper: ({ children }) => {
-              return <>{children}</>;
-            },
-            pre: props => <StyledPre {...props} />,
-            code: ({ children }) => (
-              <LiveProvider code={children.trim()} scope={{ Box }}>
-                <StyledLivePreview />
-                <StyledLiveEditor />
-                <LiveError />
-              </LiveProvider>
-            ),
-          }}
-        >
-          <Box>
-            <StyledBox>
-              {children}
-              <Live />
-            </StyledBox>
-          </Box>
-        </MDXProvider>
-      </Flex>
-    </Layout>
+    <Highlight {...defaultProps} code={children} language={language}>
+      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+        <pre className={className} style={style}>
+          {tokens.map((line, i) => (
+            <div key={i} {...getLineProps({ line, key: i })}>
+              {line.map((token, key) => (
+                <span key={key} {...getTokenProps({ token, key })} />
+              ))}
+            </div>
+          ))}
+        </pre>
+      )}
+    </Highlight>
   );
 };
 
-Components.propTypes = {
+CodeBlock.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.String,
+  live: PropTypes.Boolean,
 };
 
-export default Components;
+export default CodeBlock;
