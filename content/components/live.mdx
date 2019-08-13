@@ -4,19 +4,21 @@
 
 The Box component is a low-level primitive used for layout purposes. It can be used to create grid layouts, apply padding or margin, and more.
 
-Here is an example of how the Box component can be used to apply padding and border around its children.
+Here is an example of how the Box component can be used to apply background and border colour as well as updating text.
 
-import Box from 'components/box';
+import Box from 'lib/BoxExample';
 
-```js live=true
-<React.Fragment>
-  <Box>This is box</Box>
-  <Box bgColor="primary">This is box</Box>
-  <Box bgColor="secondary">This is box</Box>
-  <Box bgColor="tertiary">This is box</Box>
-</React.Fragment>
+```js
+  <Box bgColor="Coral">This is box</Box>
 ```
 
 ```js
+<React.Fragment>
   <Box>This is box</Box>
+  <Box bgColor="#f0f0f0" >This is box</Box>
+  <Box bgColor="secondary">This is box</Box>
+  <Box bgColor="tertiary" borderColor="#f0f0f0">This is box</Box>
+</React.Fragment>
 ```
+
+
