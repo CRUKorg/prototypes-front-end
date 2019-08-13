@@ -30,5 +30,11 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-source-atom`,
+      options: {
+        source: `https://github.com/CRUKorg/prototypes-front-end/commits/starling.atom`,
+      }
+    },
   ],
 };

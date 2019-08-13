@@ -9,6 +9,7 @@ import {
   MainBanner,
   MainTitle,
 } from '../components/box/box.css';
+import AtomFeed from 'components/AtomFeed/AtomFeed';
 
 const Index = ({ data }) => (
   <Layout>
@@ -30,6 +31,9 @@ const Index = ({ data }) => (
           __html: data.homeJson.content.childMarkdownRemark.html,
         }}
       />
+    </Box>
+    <Box>
+      <AtomFeed data={data.allAtomEntry.edges} />
     </Box>
   </Layout>
 );
@@ -66,6 +70,14 @@ export const query = graphql`
         childMarkdownRemark {
           html
           rawMarkdownBody
+        }
+      }
+    }
+    allAtomEntry {
+      edges {
+        node {
+          title
+          link
         }
       }
     }
