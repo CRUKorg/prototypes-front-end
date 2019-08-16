@@ -15,3 +15,6 @@ build
 
 .idea/*
 package-lock.json
+yarn.lock
+
+contentful.config.js
