@@ -1,5 +1,24 @@
+let contentfulConfig;
+
+try {
+  contentfulConfig = require('./contentful.config');
+} catch (_) {}
+
+contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID || contentfulConfig.spaceId,
+  accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN || contentfulConfig.accessToken,
+  host: process.env.CONTENTFUL_HOST
+};
+
+const { spaceId, accessToken } = contentfulConfig;
+
+if (!spaceId || !accessToken) {
+  throw new Error(
+    'Contentful spaceId and the delivery token need to be provided.'
+  );
+}
+
 const siteConfig = require('./site-config');
-const contentfulConfig = require('./contentful.config');
 
 module.exports = {
   siteMetadata: {
@@ -39,10 +58,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: contentfulConfig.spaceId,
-        accessToken: contentfulConfig.accessToken,
-      }
+      options: contentfulConfig,
     },
     {
       resolve: `gatsby-transformer-remark`,
