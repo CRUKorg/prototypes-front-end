@@ -74,6 +74,9 @@ export const SiteSpecific = css`
   strong {
     font-weight: bold;
   }
+  i {
+    font-style: italic;
+  }
 
   /* Markdown Styles */
   .markdown {

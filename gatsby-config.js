@@ -44,5 +44,22 @@ module.exports = {
         accessToken: contentfulConfig.accessToken,
       }
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-custom-image-component`,
+            options: {
+              componentName: 'image-wrapper',
+              imagePropName: 'src',
+              sharpMethod: 'fluid',
+              quality: 50,
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
   ],
 };
