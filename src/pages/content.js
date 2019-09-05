@@ -25,7 +25,18 @@ const Content = ({ data }) => {
             <ul>
               {listing.map(({ node: post }) => (
                 <li key={post.id}>
-                  <Link to={`/content/post/${post.slug}`}>{post.title}</Link>
+                  <Link to={`/content/post/${post.slug}`}>{post.menuTitle || post.title}</Link>
+                  {post.childPages && (
+                    <ul>
+                      {Object.keys(post.childPages).map((key, index) => (
+                        <li key={post.childPages[key].id}>
+                          <Link to={`/content/post/${post.childPages[key].slug}`}>
+                            {post.childPages[key].menuTitle}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
             </ul>
@@ -49,6 +60,7 @@ export const query = graphql`
         node {
           id
           title
+          menuTitle
           slug
           body {
             body
@@ -59,6 +71,11 @@ export const query = graphql`
             }
           }
           tags
+          childPages {
+            menuTitle
+            slug
+            id
+          }
         }
       }
     }
