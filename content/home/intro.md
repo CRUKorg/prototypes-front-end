@@ -1,1 +1,2 @@
-<blockquote> A Design System is made from many ingredients that come together to help the organization tell the story of how they design and build digital things.</blockquote>
+<h1>Design system</h1>
+<p>UX guidelines, HTML/CSS framework, and Angular components working together to craft exceptional experiences</p>

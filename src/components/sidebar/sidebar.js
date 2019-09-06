@@ -1,7 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SideNav } from './sidebar.css';
-import Header from '../header';
+import styled from 'styled-components';
+import { COLORS, TYPOGRAPHY } from 'constants/constants';
+
+const SideNav = styled.div`
+  width: 100%;
+  max-width: 230px;
+  color: ${COLORS.white};
+  background-color: ${COLORS.primary};
+  font-family: ${TYPOGRAPHY.fontFamilyHeadings};
+  padding-top: 24px;
+  padding-left: 15px;
+  height: 100vh;
+  li {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 10px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    list-style: none;
+    ul {
+      border-left: 5px solid #ccc;
+      margin-left: 10px;
+    }
+  }
+`;
 
 const DesignNav = (
   <ul>
@@ -76,7 +103,7 @@ const Sidebar = ({ cat }) => (
   </SideNav>
 );
 
-Header.propTypes = {
+Sidebar.propTypes = {
   cat: PropTypes.string,
 };
 

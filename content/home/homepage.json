@@ -3,27 +3,27 @@
   "intro": "intro.md",
   "gallery": [
   {
-    "title": "Content",
+    "title": "Writing patterns",
     "copy": "Learn how to use language to design a more thoughtful product experience.",
-    "image": "../images/gallery/image.png",
+    "image": "../images/gallery/content.png",
     "toPage": "content"
   },
   {
-    "title": "Design",
+    "title": "Visual language",
     "copy": "Find out how we approach the visual elements of our interface with purpose.",
-    "image": "../images/gallery/image.png",
+    "image": "../images/gallery/design.png",
     "toPage": "design"
   },
   {
-    "title": "Components",
+    "title": "Component library",
     "copy": "Use components as building blocks as you develop new products and features.",
-    "image": "../images/gallery/image.png",
+    "image": "../images/gallery/component.png",
     "toPage": "components"
   },
   {
-    "title": "Patterns & Guides",
+    "title": "Playbook & guideline",
     "copy": "See how we put the pieces together to create meaningful product experiences.",
-    "image": "../images/gallery/image.png",
+    "image": "../images/gallery/guide.png",
     "toPage": "patterns"
   }],
   "content": "content.md"

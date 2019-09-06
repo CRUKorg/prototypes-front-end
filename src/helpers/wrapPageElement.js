@@ -1,5 +1,5 @@
 import React from 'react';
-import Transition from 'components/transition';
+import Transition from 'components/Transition';
 import PropTypes from 'prop-types';
 
 const wrapPageElement = ({ element, props }) => {

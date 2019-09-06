@@ -1,5 +1,5 @@
 export const COLORS = {
-  primary: 'hsl(260, 100%, 27%)', // #2e008b
+  primary: '#2e008b',
   primaryHover: '#ec008c',
   secondary: '#ec008c',
   secondaryHover: '#ff20a4',
@@ -57,10 +57,10 @@ export const UTILITIES = {
   borderColor: COLORS.gray,
   lineHeight: '1.5',
   lineHeightLarge: '2',
-  rhythmBase: '15px',
-  rhythmVerticalBase: '15px',
-  rhythmHorizontalBase: '15px',
+  rhythmBase: '16px',
+  rhythmVerticalBase: '16px',
+  rhythmHorizontalBase: '16px',
   contentMaxWidth: '1020px',
-  spacingBase: '5px',
-  spacingUnit: '5',
+  spacingBase: '8px',
+  spacingUnit: '8',
 };

@@ -13,4 +13,18 @@ module.exports = {
     twitter: `CR_UK`,
     fbAppId: ``,
   },
+  footerLinks: [
+    {
+      name:`Find Team Starling`,
+      link:`https://tinyurl.com/y4hz4fyu`,
+    },
+    {
+      name:`Drop us an email`,
+      link:`mailto:Tech-ProjectStarling@CancerResearchUKO365.onmicrosoft.com`,
+    },
+    {
+      name:`Github`,
+      link:`https://github.com/CRUKorg/prototypes-front-end/tree/starling`,
+    },
+  ],
 };

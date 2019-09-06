@@ -1,18 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
 import Img from 'gatsby-image';
-import { Copy } from './item.css';
 
-const Item = ({ title, copy, image, toPage }) => (
+
+const Item = ({ title, copy, image }) => (
   <figure>
     <Img fluid={image ? image.childImageSharp.fluid : {}} alt={title} />
     <figcaption>
-      <h2>{title}</h2>
-      <Copy>{copy}</Copy>
-      <Link to={`/${toPage}/`} activeClassName="active" partiallyActive={true}>
-        View the guidelines
-      </Link>
+      <h3>{title}</h3>
+      <p>{copy}</p>
     </figcaption>
   </figure>
 );

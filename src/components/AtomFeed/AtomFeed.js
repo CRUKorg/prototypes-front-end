@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const FeedWrapper = styled.div`
-  max-width: 500px;
   font-size: 1rem;
-  margin: 0 auto 50px;
   ul {
     list-style-type: none;
     padding-left: 40px;

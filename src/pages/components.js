@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import { MDXProvider } from '@mdx-js/react';
 import styled from 'styled-components';
-import Layout from 'components/layout';
+import Layout from 'components/Layout';
 import Box from 'lib/BoxExample';
 import Flex from 'components/flex/flex';
-import Head from 'components/head';
-import Sidebar from 'components/header/sidebar/sidebar';
+import Head from 'components/Head';
+import Sidebar from 'components/sidebar';
 import Live from '../../content/components/live.mdx';
 
 const StyledBox = styled.div`
