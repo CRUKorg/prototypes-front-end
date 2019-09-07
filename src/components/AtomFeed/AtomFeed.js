@@ -15,11 +15,6 @@ const AtomFeed = ({ data }) => {
   const atom = data.slice(0, 10) || {};
   return (
     <FeedWrapper>
-      <h3>Change log</h3>
-      <p>
-        As a living, breathing brand, these guidelines are never set in stone. We’re constantly adding and adapting,
-        so see below for our most recent updates.
-      </p>
       <ul>
         {Object.keys(atom).map((item, i) => (
           <li key={i}>

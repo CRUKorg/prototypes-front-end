@@ -73,32 +73,33 @@ const Main = styled.div`
   height: 100%;
   padding: 0;
   min-height: calc(100vh - 50px);
-  background-color: #fafafa;
+  background-color: ${COLORS.grayVLight};
 `;
 
-const TopBanner = styled.div`
-  width: 100%;
+const Ribon = styled.div`
+  width: 250px;
   position: fixed;
-  top: 0;
+  top: 50px;
+  right: -50px;
   display: block;
-  padding: 10px 0;
-  background-color: hsla(324, 100%, 46%, 0.7);
+  background-color: hsla(324, 100%, 46%, 0.9);
   color: white;
   font-weight: bold;
   text-align: center;
   z-index: 1000;
-  display: none;
+  transform: rotate(45deg);
+  padding: 5px 0;
 `;
 
 const Layout = ({ data, children }) => (
   <div>
     <GlobalStyle />
-    <TopBanner>
+    <Ribon>
       <span role="img" aria-label="waving hands">
         👋
       </span>
       &nbsp;Hi, this is a demo!
-    </TopBanner>
+    </Ribon>
     <Head />
     <AnimatedContainer>
       <Header>

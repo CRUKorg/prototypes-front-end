@@ -1,9 +1,12 @@
 {
   "title": "Home",
-  "intro": "intro.md",
+  "promo": {
+    "title": "Design System",
+    "copy": "A design system is basically the story of how an organization builds a digital product."
+  },
   "gallery": [
   {
-    "title": "Writing patterns",
+    "title": "Writing content",
     "copy": "Learn how to use language to design a more thoughtful product experience.",
     "image": "../images/gallery/content.png",
     "toPage": "content"
@@ -26,5 +29,33 @@
     "image": "../images/gallery/guide.png",
     "toPage": "patterns"
   }],
-  "content": "content.md"
+  "card": {
+    "title": "From prototype to product, faster and better",
+    "copy": [
+      {
+        "title": "User concentric",
+        "copy": "We work closely with users to understand and solve the vast array of challenges they face. These solutions are built into the system and contributed back to the community.",
+        "image": "../images/gallery/user.png"
+      },
+      {
+        "title": "Rapid development",
+        "copy": "The shared foundation of design and development makes communication and collaboration between different areas of expertise easier than ever.",
+        "image": "../images/gallery/process.png"
+      },
+      {
+        "title": "Evolving",
+        "copy": "Design patterns and technology change quickly. Clarity is built to anticipate and adopt to changes quickly and easily.",
+        "image": "../images/gallery/thumb_up.png"
+      },
+      {
+        "title": "Reliable",
+        "copy": "We have a dedicated team focused on shipping frequently, with a high bar of quality standard.",
+        "image": "../images/gallery/shield.png"
+      }
+    ]
+  },
+  "log": {
+    "title": "Change log",
+    "copy": "As a living, breathing brand, these guidelines are never set in stone. We're constantly adding and adapting, so see below for our most recent updates."
+  }
 }

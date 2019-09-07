@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Item from './item';
 import MEDIA from 'helpers/mediaTemplates';
-import { COLORS, TYPOGRAPHY, UTILITIES } from 'constants/constants';
+import { COLORS, UTILITIES } from 'constants/constants';
 
 const Container = styled.div`
+  position: relative;
+  z-index: 1;
+  margin-top: -64px;
   display: block;
   grid-gap: 2rem;
   padding: 0 32px 32px;
