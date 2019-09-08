@@ -19,7 +19,9 @@ const AtomFeed = ({ data }) => {
         {Object.keys(atom).map((item, i) => (
           <li key={i}>
             <a
-              target='_blank' rel='noreferrer noopener' href={atom[item].node.link}
+              target="_blank"
+              rel="noreferrer noopener"
+              href={atom[item].node.link}
             >
               {atom[item].node.title}
             </a>
@@ -27,7 +29,7 @@ const AtomFeed = ({ data }) => {
         ))}
       </ul>
     </FeedWrapper>
-  )
+  );
 };
 
 AtomFeed.propTypes = {

@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container } from './flex.css';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  display: flex;
+`;
 
 const Flex = ({ children }) => <Container>{children}</Container>;
 

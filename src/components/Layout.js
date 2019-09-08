@@ -71,6 +71,7 @@ const Main = styled.div`
   display: block;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   padding: 0;
   min-height: calc(100vh - 50px);
   background-color: ${COLORS.grayVLight};
@@ -115,11 +116,7 @@ const Layout = ({ data, children }) => (
     <Footer>
       {data.site.siteMetadata.footerLinks.map(link => (
         <span key={link.name}>
-          <a
-            href={link.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={link.link} target="_blank" rel="noopener noreferrer">
             {link.name}
           </a>
           <span>|</span>

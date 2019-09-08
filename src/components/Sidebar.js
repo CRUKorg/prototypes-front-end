@@ -5,13 +5,13 @@ import { COLORS, TYPOGRAPHY } from 'constants/constants';
 
 const SideNav = styled.div`
   width: 100%;
-  max-width: 230px;
+  max-width: 320px;
   color: ${COLORS.white};
   background-color: ${COLORS.primary};
   font-family: ${TYPOGRAPHY.fontFamilyHeadings};
-  padding-top: 24px;
-  padding-left: 15px;
-  height: 100vh;
+  padding: 32px 16px;
+  margin-bottom: -5000px;
+  padding-bottom: 5000px;
   li {
     display: block;
     padding-top: 0;
@@ -99,7 +99,13 @@ const Sidebar = ({ cat }) => (
   <SideNav>
     {cat === 'design' && DesignNav}
     {cat === 'patterns' && PatternNav}
-    {!cat && (<ul><li><span>{cat}</span></li></ul>)}
+    {!cat && (
+      <ul>
+        <li>
+          <span>{cat}</span>
+        </li>
+      </ul>
+    )}
   </SideNav>
 );
 
