@@ -2,30 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import Layout from 'components/Layout';
-import Box from 'components/box';
-import Flex from 'components/flex/flex';
+import Flex from 'components/Flex';
 import Head from 'components/Head';
-import Sidebar from 'components/sidebar';
+import Layout from 'components/Layout';
+import SideNav from 'components/SideNav';
 
-const StyledBox = styled.div`
-  padding: 20px 2% 0;
+const Main = styled.div`
+  padding: 32px 2%;
 `;
 
 const Patterns = ({ data }) => (
   <Layout>
     <Head pageTitle={data.patternsJson.title} />
     <Flex>
-      <Sidebar cat="patterns" />
-      <Box>
-        <StyledBox>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: data.patternsJson.content.childMarkdownRemark.html,
-            }}
-          />
-        </StyledBox>
-      </Box>
+      <SideNav category="Guidelines" />
+      <Main>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: data.patternsJson.content.childMarkdownRemark.html,
+          }}
+        />
+      </Main>
     </Flex>
   </Layout>
 );

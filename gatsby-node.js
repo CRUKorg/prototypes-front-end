@@ -11,9 +11,11 @@ exports.onCreateWebpackConfig = ({
   actions.setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-      plugins: [new DirectoryNamedWebpackPlugin({
-        exclude: /node_modules/
-      })],
+      plugins: [
+        new DirectoryNamedWebpackPlugin({
+          exclude: /node_modules/,
+        }),
+      ],
     },
   });
 };
@@ -26,6 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
         allContentfulGeneral {
           edges {
             node {
+              category
               id
               slug
             }
@@ -33,15 +36,15 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `
-  ).then(
-    result => {
+  )
+    .then(result => {
       if (result.errors) {
         console.log('Error retrieving contentful data', result.errors);
       }
       const postTemplate = path.resolve('./src/templates/post.js');
       result.data.allContentfulGeneral.edges.forEach(edge => {
         createPage({
-          path: `/content/post/${edge.node.slug}/`,
+          path: `/${edge.node.slug}`,
           component: postTemplate,
           context: {
             slug: edge.node.slug,

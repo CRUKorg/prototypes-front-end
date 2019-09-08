@@ -4,7 +4,7 @@ import posed from 'react-pose';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import styled from 'styled-components';
 import Head from 'components/Head';
-import Nav from 'components/nav';
+import Nav from 'components/Nav';
 import GlobalStyle from 'global.css';
 import LogoImg from 'images/logo.png';
 import { COLORS, TYPOGRAPHY, UTILITIES } from 'constants/constants';

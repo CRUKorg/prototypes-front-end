@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
+import AtomFeed from 'components/AtomFeed';
+import Box from 'components/Box';
+import Gallery from 'components/Gallery';
 import Layout from 'components/Layout';
-import Box from 'components/box';
-import Gallery from 'components/gallery';
-import AtomFeed from 'components/AtomFeed/AtomFeed';
-import { COLORS } from 'constants/constants';
-import Item from 'components/gallery/item';
+import Item from 'components/Item';
 import MEDIA from 'helpers/mediaTemplates';
+import { COLORS } from 'constants/constants';
 
 const Promo = styled.div`
   width: 100%;

@@ -39,13 +39,17 @@ const Nav = () => (
   <Container>
     <ul>
       <li>
-        <Link to="/content/" activeClassName="active" partiallyActive={true}>
-          Content
+        <Link
+          to="/definitions-and-capitalization"
+          activeClassName="active"
+          partiallyActive={true}
+        >
+          Writing
         </Link>
       </li>
       <li>
         <Link to="/design" activeClassName="active" partiallyActive={true}>
-          Design
+          Visual
         </Link>
       </li>
       <li>
@@ -55,7 +59,7 @@ const Nav = () => (
       </li>
       <li>
         <Link to="/patterns" activeClassName="active" partiallyActive={true}>
-          Patterns & guides
+          Guidelines
         </Link>
       </li>
     </ul>

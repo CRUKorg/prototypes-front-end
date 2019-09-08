@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import Layout from 'components/Layout';
-import Box from 'components/box';
-import Flex from 'components/flex';
+import Flex from 'components/Flex';
 import Head from 'components/Head';
-import Sidebar from 'components/sidebar';
+import Layout from 'components/Layout';
+import Sidebar from 'components/Sidebar';
 
 const StyledBox = styled.div`
   padding: 20px 2% 0;
@@ -17,15 +16,13 @@ const Design = ({ data }) => (
     <Head pageTitle={data.designJson.title} />
     <Flex>
       <Sidebar cat="design" />
-      <Box>
-        <StyledBox>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: data.designJson.content.childMarkdownRemark.html,
-            }}
-          />
-        </StyledBox>
-      </Box>
+      <StyledBox>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: data.designJson.content.childMarkdownRemark.html,
+          }}
+        />
+      </StyledBox>
     </Flex>
   </Layout>
 );

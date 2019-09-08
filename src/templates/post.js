@@ -1,30 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import styled from 'styled-components';
-import Box from 'components/box';
-import Flex from 'components/flex/flex';
-import Layout from 'components/Layout';
+import Flex from 'components/Flex';
 import ImageWrapper from 'components/ImageWrapper';
-import Sidebar from 'components/sidebar';
+import Layout from 'components/Layout';
+import SideNav from 'components/SideNav';
 
-const StyledBox = styled.div`
-  padding: 20px 2% 0;
+const Main = styled.div`
+  padding: 32px 2%;
 `;
-const Tags = styled.div`
-  span {
-    background-color: #f3f4f4;
-    border-radius: 4px;
-    padding: 5px 10px;
-    display: inline-block;
-    margin: 8px;
-  }
+const SectionTitle = styled.div`
+  text-transform: capitalize;
+  font-weight: bold;
 `;
 const Post = ({ data }) => {
   const {
-    title, childContentfulGeneralBodyRichTextNode, image, tags
+    title,
+    childContentfulGeneralBodyRichTextNode,
+    image,
+    category,
   } = data.contentfulGeneral;
 
   const options = {
@@ -37,31 +34,25 @@ const Post = ({ data }) => {
   return (
     <Layout>
       <Flex>
-        <Sidebar />
-        <Box>
-          <StyledBox>
-            <h1>{title}</h1>
-            {image && image.file.url ? (
-              <div>
-                <img alt={title} src={image.file.url} />
-              </div>
-            ) : '' }
+        <SideNav category={category} />
+        <Main>
+          <SectionTitle>{category}</SectionTitle>
+          <h1>{title}</h1>
+          {image && image.file.url ? (
             <div>
-              {documentToReactComponents(
+              <img alt={title} src={image.file.url} />
+            </div>
+          ) : (
+            ''
+          )}
+          <div>
+            {childContentfulGeneralBodyRichTextNode &&
+              documentToReactComponents(
                 childContentfulGeneralBodyRichTextNode.json,
                 options
               )}
-            </div>
-            <Tags>
-              {tags.map(tag => (
-                <span key={tag}>{tag}</span>
-              ))}
-            </Tags>
-            <p>
-              <Link to="/content">Back to listing</Link>
-            </p>
-          </StyledBox>
-        </Box>
+          </div>
+        </Main>
       </Flex>
     </Layout>
   );
@@ -77,6 +68,7 @@ export default Post;
 export const pageQuery = graphql`
   query($slug: String!) {
     contentfulGeneral(slug: { eq: $slug }) {
+      category
       title
       slug
       body {
@@ -90,7 +82,6 @@ export const pageQuery = graphql`
           url
         }
       }
-      tags
     }
   }
 `;

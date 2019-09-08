@@ -18,9 +18,7 @@ const Box = ({ children, bgColor, borderColor }) => {
   const theme = {};
   return (
     <ThemeProvider theme={theme}>
-      <BoxWrapper>
-        {children}
-      </BoxWrapper>
+      <BoxWrapper>{children}</BoxWrapper>
     </ThemeProvider>
   );
 };
