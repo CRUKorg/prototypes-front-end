@@ -2,16 +2,40 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, Link, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
+import MEDIA from 'helpers/mediaTemplates';
 import { COLORS } from 'constants/constants';
+import { UTILITIES } from '../constants/constants';
+
+const Arrow = styled.input`
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+  z-index: 2;
+  position: absolute;
+`;
+
+const ArrowLabel = styled.label`
+  padding-left: 24px;
+`;
 
 const Side = styled.div`
-  width: 100%;
-  max-width: 320px;
   color: ${COLORS.white};
   background-color: ${COLORS.primary};
   padding: 32px 16px;
-  margin-bottom: -5000px;
-  padding-bottom: 5000px;
+  ${MEDIA.TABLET`
+    position: fixed;
+    left: -250px;
+    top: 60px;
+    height: 100vh;
+    width: 90%;
+    max-width: 250px;
+  `};
+  ${MEDIA.MIN_TABLET`
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: -5000px;
+    padding-bottom: 5000px;
+  `};
   li {
     display: block;
     padding-top: 0;
@@ -46,27 +70,19 @@ const Side = styled.div`
     top: 6px;
     left: 2px;
   }
-  input {
-    width: 16px;
-    height: 16px;
-    display: block;
-    opacity: 0;
-    z-index: 2;
-    position: absolute;
-    cursor: pointer;
-  }
+  input,
   label {
+    display: block;
     cursor: pointer;
-    padding-left: 24px;
   }
-  input:checked ~ label i {
+  ${Arrow}:checked ~ ${ArrowLabel} i {
     transform: rotate(45deg);
   }
-  input ~ div {
+  ${Arrow} ~ div {
     height: 0;
     overflow: hidden;
   }
-  input:checked ~ div {
+  ${Arrow}:checked ~ div {
     height: auto;
   }
   div {
@@ -80,6 +96,59 @@ const TopLevel = styled.div``;
 const SecondLevel = styled.div`
   padding-left: 24px;
 `;
+
+const SlideBtnLabel = styled.label`
+  span {
+    border: solid ${COLORS.white};
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(-45deg);
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    margin-top: 6px;
+    margin-left: 3px;
+  }
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 27px;
+  height: 27px;
+  cursor: pointer;
+  background-color: ${COLORS.primary};
+  border-left: 0;
+  border-radius: 0 ${UTILITIES.borderRadius} ${UTILITIES.borderRadius} 0;
+  ${MEDIA.MIN_TABLET`
+    display: none;
+  `};
+`;
+
+const SlideBtn = styled.input`
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 27px;
+  height: 27px;
+  display: block;
+  opacity: 0;
+  margin: 0;
+  &:checked {
+    left: 0;
+  }
+  &:checked ~ ${SlideBtnLabel} {
+    span {
+      transform: rotate(135deg);
+      margin-left: 8px;
+    }
+    left: 250px;
+  }
+  &:checked ~ div {
+    left: 0;
+  }
+  ${MEDIA.MIN_TABLET`
+    display: none;
+  `};
+`;
+
 const SideNav = props => {
   return (
     <StaticQuery
@@ -123,59 +192,65 @@ const SideNav = props => {
           const linkTo = <Link to={`/${slug}`}>{menuTitle || title}</Link>;
           return hasChildPages !== null ? (
             <React.Fragment>
-              <input type="checkbox" id={slug} name={slug} />
-              <label htmlFor={slug}>
+              <Arrow type="checkbox" id={slug} name={slug} />
+              <ArrowLabel htmlFor={slug}>
                 <i />
                 {linkTo}
-              </label>
+              </ArrowLabel>
             </React.Fragment>
           ) : (
             <React.Fragment>{linkTo}</React.Fragment>
           );
         };
         return (
-          <Side>
-            {listing.sectionTitle && <h5>{listing.sectionTitle}</h5>}
-            {listing.navigationItem &&
-              listing.navigationItem.map((level1, i) => (
-                <TopLevel key={i}>
-                  {accordion(
-                    level1.slug,
-                    level1.title,
-                    level1.menuTitle,
-                    level1.childPages
-                  )}
-                  {level1.childPages && (
-                    <SecondLevel>
-                      {level1.childPages.map((level2, i) => (
-                        <div key={i}>
-                          {accordion(
-                            level2.slug,
-                            level2.title,
-                            level2.menuTitle,
-                            level2.childPages
-                          )}
-                          {level2.childPages && (
-                            <div>
-                              {level2.childPages.map((level3, i) => (
-                                <div key={i}>
-                                  {accordion(
-                                    level3.slug,
-                                    level3.title,
-                                    level3.menuTitle,
-                                    level3.childPages
-                                  )}
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      ))}
-                    </SecondLevel>
-                  )}
-                </TopLevel>
-              ))}
-          </Side>
+          <React.Fragment>
+            <SlideBtn type="checkbox" id="slide-nav" name="slide-nav" />
+            <SlideBtnLabel htmlFor="slide-nav">
+              <span />
+            </SlideBtnLabel>
+            <Side>
+              {listing.sectionTitle && <h5>{listing.sectionTitle}</h5>}
+              {listing.navigationItem &&
+                listing.navigationItem.map((level1, i) => (
+                  <TopLevel key={i}>
+                    {accordion(
+                      level1.slug,
+                      level1.title,
+                      level1.menuTitle,
+                      level1.childPages
+                    )}
+                    {level1.childPages && (
+                      <SecondLevel>
+                        {level1.childPages.map((level2, i) => (
+                          <div key={i}>
+                            {accordion(
+                              level2.slug,
+                              level2.title,
+                              level2.menuTitle,
+                              level2.childPages
+                            )}
+                            {level2.childPages && (
+                              <div>
+                                {level2.childPages.map((level3, i) => (
+                                  <div key={i}>
+                                    {accordion(
+                                      level3.slug,
+                                      level3.title,
+                                      level3.menuTitle,
+                                      level3.childPages
+                                    )}
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </SecondLevel>
+                    )}
+                  </TopLevel>
+                ))}
+            </Side>
+          </React.Fragment>
         );
       }}
     />
@@ -183,7 +258,7 @@ const SideNav = props => {
 };
 
 SideNav.propTypes = {
-  data: PropTypes.Object,
+  data: PropTypes.object,
   category: PropTypes.any,
 };
 
