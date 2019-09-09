@@ -252,7 +252,6 @@ export const query = graphql`
             }
           }
         }
-        toPage
       }
       card {
         title

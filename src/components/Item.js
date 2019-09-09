@@ -16,7 +16,6 @@ Item.propTypes = {
   title: PropTypes.string,
   copy: PropTypes.string,
   image: PropTypes.object.isRequired,
-  toPage: PropTypes.string,
 };
 
 export default Item;

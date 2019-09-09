@@ -5,24 +5,24 @@ import styled from 'styled-components';
 import Flex from 'components/Flex';
 import Head from 'components/Head';
 import Layout from 'components/Layout';
-import Sidebar from 'components/Sidebar';
+import SideNav from 'components/SideNav';
 
-const StyledBox = styled.div`
-  padding: 20px 2% 0;
+const Main = styled.div`
+  padding: 32px 2%;
 `;
 
 const Design = ({ data }) => (
   <Layout>
     <Head pageTitle={data.designJson.title} />
     <Flex>
-      <Sidebar cat="design" />
-      <StyledBox>
+      <SideNav category="Visual" />
+      <Main>
         <div
           dangerouslySetInnerHTML={{
             __html: data.designJson.content.childMarkdownRemark.html,
           }}
         />
-      </StyledBox>
+      </Main>
     </Flex>
   </Layout>
 );

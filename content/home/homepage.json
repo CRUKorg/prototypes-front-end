@@ -8,26 +8,22 @@
   {
     "title": "Writing content",
     "copy": "Learn how to use language to design a more thoughtful product experience.",
-    "image": "../images/gallery/content.png",
-    "toPage": "content"
+    "image": "../images/gallery/content.png"
   },
   {
     "title": "Visual language",
     "copy": "Find out how we approach the visual elements of our interface with purpose.",
-    "image": "../images/gallery/design.png",
-    "toPage": "design"
+    "image": "../images/gallery/design.png"
   },
   {
     "title": "Component library",
     "copy": "Use components as building blocks as you develop new products and features.",
-    "image": "../images/gallery/component.png",
-    "toPage": "components"
+    "image": "../images/gallery/component.png"
   },
   {
     "title": "Playbook & guideline",
     "copy": "See how we put the pieces together to create meaningful product experiences.",
-    "image": "../images/gallery/guide.png",
-    "toPage": "patterns"
+    "image": "../images/gallery/guide.png"
   }],
   "card": {
     "title": "From prototype to product, faster and better",

@@ -7,11 +7,11 @@ import Layout from 'components/Layout';
 import Box from 'lib/BoxExample';
 import Flex from 'components/Flex';
 import Head from 'components/Head';
-import Sidebar from 'components/Sidebar';
+import SideNav from 'components/SideNav';
 import Live from '../../content/components/live.mdx';
 
-const StyledBox = styled.div`
-  padding: 20px 2% 0;
+const Main = styled.div`
+  padding: 32px 2%;
 `;
 const StyledLiveEditor = styled(LiveEditor)`
   background-color: rgb(54, 65, 65);
@@ -67,7 +67,7 @@ const Components = ({ children }) => {
     <Layout>
       <Head pageTitle="Components" />
       <Flex>
-        <Sidebar />
+        <SideNav category="Components" />
         <MDXProvider
           components={{
             wrapper: ({ children }) => {
@@ -83,12 +83,10 @@ const Components = ({ children }) => {
             ),
           }}
         >
-          <Box>
-            <StyledBox>
-              {children}
-              <Live />
-            </StyledBox>
-          </Box>
+          <Main>
+            {children}
+            <Live />
+          </Main>
         </MDXProvider>
       </Flex>
     </Layout>

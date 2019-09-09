@@ -28,7 +28,7 @@ module.exports = {
     },
     {
       name:`Guidelines`,
-      link:`/patterns`,
+      link:`/accessibility`,
     },
   ],
   footerLinks: [
