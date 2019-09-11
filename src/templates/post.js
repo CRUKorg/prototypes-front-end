@@ -20,7 +20,6 @@ const Post = ({ data }) => {
   const {
     title,
     childContentfulGeneralBodyRichTextNode,
-    image,
     category,
   } = data.contentfulGeneral;
 
@@ -28,6 +27,15 @@ const Post = ({ data }) => {
     renderNode: {
       [BLOCKS.EMBEDDED_ASSET]: node => {
         return <ImageWrapper src={node.data.target.fields.file['en-US'].url} />;
+      },
+      [BLOCKS.EMBEDDED_ENTRY]: node => {
+        return (
+          <div
+            dangerouslySetInnerHTML={{
+              __html: node.data.target.fields.main['en-US'],
+            }}
+          />
+        );
       },
     },
   };
@@ -38,13 +46,6 @@ const Post = ({ data }) => {
         <Main>
           <SectionTitle>{category}</SectionTitle>
           <h1>{title}</h1>
-          {image && image.file.url ? (
-            <div>
-              <img alt={title} src={image.file.url} />
-            </div>
-          ) : (
-            ''
-          )}
           <div>
             {childContentfulGeneralBodyRichTextNode &&
               documentToReactComponents(

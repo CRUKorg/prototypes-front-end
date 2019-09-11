@@ -16,11 +16,11 @@ module.exports = {
   headerLinks: [
     {
       name:`Writing`,
-      link:`/definitions-and-capitalization`,
+      link:`/how-to-talk`,
     },
     {
       name:`Visual`,
-      link:`/design`,
+      link:`/visual`,
     },
     {
       name:`Components`,
