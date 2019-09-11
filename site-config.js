@@ -16,7 +16,7 @@ module.exports = {
   headerLinks: [
     {
       name:`Writing`,
-      link:`/how-to-talk`,
+      link:`/writing`,
     },
     {
       name:`Visual`,
@@ -28,7 +28,7 @@ module.exports = {
     },
     {
       name:`Guidelines`,
-      link:`/accessibility`,
+      link:`/guidelines`,
     },
   ],
   footerLinks: [
