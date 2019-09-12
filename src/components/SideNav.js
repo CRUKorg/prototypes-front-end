@@ -100,6 +100,9 @@ const SecondLevel = styled.div`
 const NavBlock = styled.div`
   margin-bottom: 24px;
 `;
+const NavItem = styled.div`
+  padding-left: 16px;
+`;
 const SlideBtnLabel = styled.label`
   span {
     border: solid ${COLORS.white};
@@ -214,45 +217,47 @@ const SideNav = props => {
           return (
             <NavBlock key={i}>
               <h5>{nav.title}</h5>
-              {nav.navigationItem &&
-                nav.navigationItem.map((level1, i) => (
-                  <TopLevel key={i}>
-                    {accordion(
-                      level1.slug,
-                      level1.title,
-                      level1.menuTitle,
-                      level1.childPages
-                    )}
-                    {level1.childPages && (
-                      <SecondLevel>
-                        {level1.childPages.map((level2, i) => (
-                          <div key={i}>
-                            {accordion(
-                              level2.slug,
-                              level2.title,
-                              level2.menuTitle,
-                              level2.childPages
-                            )}
-                            {level2.childPages && (
-                              <div>
-                                {level2.childPages.map((level3, i) => (
-                                  <div key={i}>
-                                    {accordion(
-                                      level3.slug,
-                                      level3.title,
-                                      level3.menuTitle,
-                                      level3.childPages
-                                    )}
-                                  </div>
-                                ))}
-                              </div>
-                            )}
-                          </div>
-                        ))}
-                      </SecondLevel>
-                    )}
-                  </TopLevel>
-                ))}
+              <NavItem>
+                {nav.navigationItem &&
+                  nav.navigationItem.map((level1, i) => (
+                    <TopLevel key={i}>
+                      {accordion(
+                        level1.slug,
+                        level1.title,
+                        level1.menuTitle,
+                        level1.childPages
+                      )}
+                      {level1.childPages && (
+                        <SecondLevel>
+                          {level1.childPages.map((level2, i) => (
+                            <div key={i}>
+                              {accordion(
+                                level2.slug,
+                                level2.title,
+                                level2.menuTitle,
+                                level2.childPages
+                              )}
+                              {level2.childPages && (
+                                <div>
+                                  {level2.childPages.map((level3, i) => (
+                                    <div key={i}>
+                                      {accordion(
+                                        level3.slug,
+                                        level3.title,
+                                        level3.menuTitle,
+                                        level3.childPages
+                                      )}
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                        </SecondLevel>
+                      )}
+                    </TopLevel>
+                  ))}
+              </NavItem>
             </NavBlock>
           );
         });

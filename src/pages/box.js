@@ -62,7 +62,7 @@ const StyledLivePreview = styled(LivePreview)`
   border-radius: 4px 4px 0px 0px;
 `;
 
-const Components = ({ children }) => {
+const LiveExample = ({ children }) => {
   return (
     <Layout>
       <Head pageTitle="Components" />
@@ -93,8 +93,8 @@ const Components = ({ children }) => {
   );
 };
 
-Components.propTypes = {
+LiveExample.propTypes = {
   children: PropTypes.node,
 };
 
-export default Components;
+export default LiveExample;
