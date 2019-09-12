@@ -31,8 +31,9 @@ const Side = styled.div`
     max-width: 250px;
   `};
   ${MEDIA.MIN_TABLET`
-    width: 100%;
+    width: 320px;
     max-width: 320px;
+    min-width: 320px;
     margin-bottom: -5000px;
     padding-bottom: 5000px;
   `};
@@ -96,7 +97,9 @@ const TopLevel = styled.div``;
 const SecondLevel = styled.div`
   padding-left: 24px;
 `;
-
+const NavBlock = styled.div`
+  margin-bottom: 24px;
+`;
 const SlideBtnLabel = styled.label`
   span {
     border: solid ${COLORS.white};
@@ -154,15 +157,26 @@ const SideNav = props => {
     <StaticQuery
       query={graphql`
         query {
-          allContentfulNavigation {
-            nodes {
-              sectionTitle
-              title
-              category
-              navigationItem {
-                childPages {
-                  childPages {
+          allContentfulSidebar {
+            edges {
+              node {
+                category {
+                  category
+                }
+                navBlocks {
+                  title
+                  navigationItem {
                     childPages {
+                      childPages {
+                        childPages {
+                          menuTitle
+                          slug
+                          title
+                        }
+                        menuTitle
+                        slug
+                        title
+                      }
                       menuTitle
                       slug
                       title
@@ -171,23 +185,16 @@ const SideNav = props => {
                     slug
                     title
                   }
-                  menuTitle
-                  slug
-                  title
                 }
-                menuTitle
-                slug
-                title
               }
             }
           }
         }
       `}
       render={data => {
-        const filter = data.allContentfulNavigation.nodes.filter(
-          p => p.category === props.category
+        const filter = data.allContentfulSidebar.edges.filter(
+          p => p.node.category.category === props.category
         );
-        const listing = filter[0] || {};
         const accordion = (slug, title, menuTitle, hasChildPages) => {
           const linkTo = <Link to={`/${slug}`}>{menuTitle || title}</Link>;
           return hasChildPages !== null ? (
@@ -202,16 +209,13 @@ const SideNav = props => {
             <React.Fragment>{linkTo}</React.Fragment>
           );
         };
-        return (
-          <React.Fragment>
-            <SlideBtn type="checkbox" id="slide-nav" name="slide-nav" />
-            <SlideBtnLabel htmlFor="slide-nav">
-              <span />
-            </SlideBtnLabel>
-            <Side>
-              {listing.sectionTitle && <h5>{listing.sectionTitle}</h5>}
-              {listing.navigationItem &&
-                listing.navigationItem.map((level1, i) => (
+        const listing = filter[0].node.navBlocks || {};
+        const navBlock = listing.map((nav, i) => {
+          return (
+            <NavBlock key={i}>
+              <h5>{nav.title}</h5>
+              {nav.navigationItem &&
+                nav.navigationItem.map((level1, i) => (
                   <TopLevel key={i}>
                     {accordion(
                       level1.slug,
@@ -249,7 +253,16 @@ const SideNav = props => {
                     )}
                   </TopLevel>
                 ))}
-            </Side>
+            </NavBlock>
+          );
+        });
+        return (
+          <React.Fragment>
+            <SlideBtn type="checkbox" id="slide-nav" name="slide-nav" />
+            <SlideBtnLabel htmlFor="slide-nav">
+              <span />
+            </SlideBtnLabel>
+            <Side>{navBlock}</Side>
           </React.Fragment>
         );
       }}
