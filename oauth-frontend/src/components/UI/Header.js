@@ -15,13 +15,14 @@ const HeaderNav = styled.div`
   width: 100%;
   max-width: 940px;
   margin: 0 auto;
+  position: relative;
 `;
 
 const Logo = styled.img`
   height: 60px;
   transition: all 0.4s ease;
   
-  @media (min-width: ${BREAKPOINT.tablet}) {
+  @media (min-width: ${BREAKPOINT.desktop}) {
     height: inherit;
   }
 `;
@@ -31,23 +32,32 @@ const Tagline = styled.p`
   font-weight: ${TYPOGRAPHY.fontWeightLight};
   font-size: ${TYPOGRAPHY.headingLarge};
   color: ${COLORS.primary};
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  margin-top: 14px;
   
+  @media (min-width: ${BREAKPOINT.desktop}) {
+    margin-top: 25px;
+  }
   @media (max-width: ${BREAKPOINT.tablet}) {
     display: none;
   }
 `;
 
 const StyledHeader = styled.header` 
-  padding: 5px 0 0 0;
+  padding: 15px;
   position: relative;
   width: 100%;
   border-bottom: solid 1px ${COLORS.grayLight};
   background-color: ${COLORS.white};
-  -webkit-transition: all 0.4s ease;
  	transition: all 0.4s ease;
  	z-index: 9998;
+
  	img {
  	  width: auto;
+    vertical-align: middle;
  	}
  	.sticky & {
     position: fixed;
@@ -62,13 +72,6 @@ const StyledHeader = styled.header`
     ${Tagline} {
       margin: 0 0 0 110px;
     }
-  }
-  
-  @media (min-width: ${BREAKPOINT.mobile}) {
-    padding: 5px;
-  }
-  @media (min-width: ${BREAKPOINT.desktop}) {
-    padding: 15px 0;
   }
 `;
 

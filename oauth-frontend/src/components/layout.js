@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import styled from 'styled-components';
 
 import Header from "./UI/Header";
+import Footer from "./UI/Footer";
 import Box from "./UI/Box/Box";
 import GlobalStyle from './UI/GlobalStyle';
 
@@ -11,15 +12,22 @@ const StyledBox = styled(Box)`
   margin: 20px auto;
 `;
 
+const StyledMain = styled.main`
+  flex: 1 0 auto;
+`
+
 const Layout = ({ children }) => {
 
   return (
     <>
       <GlobalStyle />
       <Header />
-      <StyledBox>
-        <main>{children}</main>
-      </StyledBox>
+      <StyledMain>
+        <StyledBox>
+          {children}
+        </StyledBox>
+      </StyledMain>
+      <Footer />
     </>
   )
 }

@@ -14,9 +14,13 @@ const StyledLink = styled(Button)`
   padding-left: 0;
 `
 
+const StyledHeading = styled.h1`
+  margin-top: 0;
+`
+
 const IndexPage = () => (
   <Layout>
-    <h1>Login</h1>
+    <StyledHeading>Login</StyledHeading>
     <form>
       <TextField label="Email address" name="" />
       <TextField label="Password" name="password" type="password" />
