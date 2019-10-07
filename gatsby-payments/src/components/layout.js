@@ -16,7 +16,7 @@ import Button from "./UI/Button/Button";
 import GlobalStyle from './UI/GlobalStyle';
 
 const StyledBox = styled(Box)`
-  max-width: 600px;
+  max-width: 750px;
   margin: 20px auto;
 `;
 

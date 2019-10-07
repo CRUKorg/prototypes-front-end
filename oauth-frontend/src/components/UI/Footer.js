@@ -85,13 +85,9 @@ class Header extends React.Component<HeaderProps> {
               <li><a href="https://www.cancerresearchuk.org/cancer-research-uk-giving-pages-help" title="">Help</a></li>
             </ul>
           </Nav>
-          <Copy class="footer_info">Cancer Research UK is a registered
-              charity in
-              England and Wales (1089<span class="disable-detection"></span>464), Scotland (SC041666) and the
-              Isle of Man
-              (1103). Registered as a company limited by guarantee in
-              England and
-              Wales No. 4325234.
+          <Copy>
+            Cancer Research UK is a registered charity in England and Wales (1089<span class="disable-detection"></span>464), Scotland (SC041666) and the Isle of Man (1103).
+            Registered as a company limited by guarantee in England and Wales No. 4325234.
           </Copy>
           <Address>
             2 Redman Place<br/>

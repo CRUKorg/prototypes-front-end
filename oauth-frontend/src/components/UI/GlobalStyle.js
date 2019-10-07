@@ -28,9 +28,13 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${COLORS.primary};
     color: ${COLORS.grayDarker};
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     margin: 0;
-    padding: 0;
+    min-height: 100vh;
     overflow-x: hidden;
+    padding: 0;
   }
   *, *:after, *:before {
     -webkit-box-sizing: border-box;
