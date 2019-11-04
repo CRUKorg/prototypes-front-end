@@ -1,3 +1,7 @@
+const dotenv = require("dotenv")
+
+dotenv.config()
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
