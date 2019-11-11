@@ -1,3 +1,13 @@
+A prototype site using Gatsby and components from cruk-pattern-library-api with data from the NHS Conditions API to create a CRUK-branded information page
+
+## Setup
+
+1. Copy the file `.env.example` to `.env` and edit it to set the NHS_API_KEY
+2. Have Gatsby installed `npm install -g gatsby`
+3. Install deps `npm install`
+4. Run Gatsby a Gatsby command like `gatsby develop`
+5. Check out your page at `http://localhost:8000/conditions/lung-cancer/`
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
