@@ -1,0 +1,17 @@
+version: 0.1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd nhs-pattern-library-site
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: nhs-pattern-library-site/public
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - nhs-pattern-library-site/node_modules/**/*
