@@ -2,6 +2,12 @@ const dotenv = require("dotenv")
 
 dotenv.config()
 
+if (!process.env.NHS_API_KEY) {
+  throw new Error(
+    "NHS_API_KEY is not set: set it in environment variables or .env file"
+  )
+}
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
