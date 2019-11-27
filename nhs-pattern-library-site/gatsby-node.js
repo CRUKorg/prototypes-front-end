@@ -21,10 +21,43 @@ const getPage = async path => {
   return { path, page }
 }
 
-const getPages = async paths => await Promise.all(paths.map(getPage))
+exports.createPages = async ({ actions: { createPage }, cache }) => {
+  // List of paths to fetch from the API and create pages from
+  const paths = ["conditions/lung-cancer"]
 
-exports.createPages = async ({ actions: { createPage } }) => {
-  const pages = await getPages(["conditions/lung-cancer"])
+  const cachePages = await Promise.all(
+    paths.map(async path => {
+      // Unique cache key for each path
+      const key = `nhs-api:${path}`
+
+      // Promise resolves with page object fetched from cache
+      let cachedPage = await cache.get(key)
+
+      // Check if page object was fetched from the cache, and that its expiry
+      // time has not passed
+      if (cachedPage && cachedPage.expires > Date.now()) {
+        // Fresh: Return the page object
+        return cachedPage
+      } else {
+        // Stale: Either the page object did not exist in the cache, or its
+        // expiry time has passed
+
+        // Create a new page object
+        //   expires: 24 hours from now
+        //   page: Decoded JSON response from the api
+        cachePage = {
+          expires: Date.now() + 86400,
+          page: await getPage(path),
+        }
+
+        // Put the new page object in the cache, returning a Promise that
+        // resolves with the new page object
+        return cache.set(key, cachePage)
+      }
+    })
+  )
+
+  const pages = cachePages.map(cachePage => cachePage.page)
 
   pages.forEach(({ path, page }) => {
     createPage({
