@@ -23,7 +23,15 @@ const getPage = async path => {
 
 exports.createPages = async ({ actions: { createPage }, cache }) => {
   // List of paths to fetch from the API and create pages from
-  const paths = ["conditions/lung-cancer"]
+  const paths = [
+    "conditions/lung-cancer",
+    "conditions/lung-cancer/symptoms",
+    "conditions/lung-cancer/causes",
+    "conditions/lung-cancer/diagnosis",
+    "conditions/lung-cancer/treatment",
+    "conditions/lung-cancer/living-with",
+    "conditions/lung-cancer/prevention",
+  ]
 
   const cachePages = await Promise.all(
     paths.map(async path => {
