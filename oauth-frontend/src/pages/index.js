@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import TextField from "../components/UI/TextField/TextField"
 import Button from "../components/UI/Button/Button"
+import { Helmet } from "react-helmet"
 
 const StyledButton = styled(Button)`
   width: 100%;
@@ -20,6 +21,7 @@ const StyledHeading = styled.h1`
 
 const IndexPage = () => (
   <Layout>
+    <Helmet title="Cancer Research UK Login" defer={false} />
     <StyledHeading>Login</StyledHeading>
     <form>
       <TextField label="Email address" name="" />
