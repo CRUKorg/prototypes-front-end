@@ -17,6 +17,7 @@ import {
   PopOver,
   ProgressBar,
   Radio,
+  RadioGroup,
   Select,
   Step,
   TextField,
@@ -28,6 +29,7 @@ const IndexPage = () => {
   const [showModal, setShowModal] = React.useState(false)
   const toggleShowModal = () => setShowModal(!showModal)
   const [page, setPage] = React.useState(1)
+  const [selectedEmail, setSelectedEmail] = React.useState('yes')
 
   return (
     <Layout>
@@ -52,7 +54,7 @@ const IndexPage = () => {
           including versions of Lorem Ipsum.
         </p>
       </Collapse>
-      {/* <ErrorText>This is error text</ErrorText> */}
+      <ErrorText>This is error text</ErrorText>
       <Heading h1>This is H1 heading</Heading>
       <Heading h2>This is H2 heading</Heading>
       <Heading h3>This is H3 heading</Heading>
@@ -61,7 +63,7 @@ const IndexPage = () => {
       <Icon size="48px" color="secondary" />
       <Icon name="calendar" />
       <Icon name="chevronRight" />
-      {/* <Loader /> */}
+      <Loader />
       <Button appearance="primary" onClick={toggleShowModal}>
         Show me a modal
       </Button>
@@ -75,40 +77,63 @@ const IndexPage = () => {
           </Button>
         </Modal>
       )}
-      {/* <Pagination current={page} perPage={10} items={100} pagerCallback={(n) => setPage(n)} />
-        <Pagination current={page} perPage={10} items={100} hideLast pagerCallback={(n) => setPage(n)} /> */}
-      {/* <PopOver
+      <Pagination
+        current={page}
+        perPage={10}
+        items={100}
+        pagerCallback={n => setPage(n)}
+      />
+      <Pagination
+        current={page}
+        perPage={10}
+        items={100}
+        hideLast
+        pagerCallback={n => setPage(n)}
+      />
+      <PopOver
         overlay={
-          <Button
-            icon="facebookSquare"
-            appearance="link"
-            size="large"
-          />
+          <Button icon="facebookSquare" appearance="link" size="large" />
         }
       >
         <Button icon="share" appearance="secondary">
           Share top
         </Button>
-      </PopOver> */}
-      {/* <ProgressBar percentage="50" />
-      <ProgressBar percentage="50" isCircular /> */}
+      </PopOver>
+      <ProgressBar percentage="50" />
+      <ProgressBar percentage="50" isCircular />
       <Radio checked name="example" value="First option" />
-      {/* <Select error="This feild is required ☹️" label="Error message">
+      <Radio name="example" value="Second option" />
+      <RadioGroup 
+        legend="Email"
+        name="email"
+        onChange={e => setSelectedEmail(e.target.value)}
+        attributes= {[{option: 'Yes', value: 'yes'},{option: 'No', value: 'no'}]}
+        checked={selectedEmail}
+      />
+      <Select error="This feild is required ☹️" label="Error message">
         <option value="cat">Cat</option>
-      </Select> */}
-      {/* <Step current="3" steps={['Account','Details','Activity','Motivation','Page']} /> */}
-      {/* <TextField
+      </Select>
+      <Step current="3" steps={['Account','Details','Activity','Motivation','Page']} />
+      <TextField
         label="Extra left"
         extraLeft="£"
         error="This field has an error 🙁"
-      /> */}
-      {/* <Totaliser 
-        total="120" 
+      />
+      <Totaliser
+        total="120"
         giftAid="27.5"
         target="100"
-        summary={(target, percentage) => `${percentage}% of your ${target} 🎯`} 
-      /> */}
-      <UserBlock name="Sam Smith" size="large" extra={<React.Fragment><Icon name="clock"/> Just now</React.Fragment>} />
+        summary={(target, percentage) => `${percentage}% of your ${target} 🎯`}
+      />
+      <UserBlock
+        name="Sam Smith"
+        size="large"
+        extra={
+          <React.Fragment>
+            <Icon name="clock" /> Just now
+          </React.Fragment>
+        }
+      />
     </Layout>
   )
 }

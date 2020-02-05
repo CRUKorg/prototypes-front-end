@@ -6,7 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
-    "cruk-react-components": "git+https://3c5bb6e83a1ea13a16a392f0b416b07ce3cc328e:x-oauth-basic@github.com/CRUKorg/cruk-react-components.git#feature/test-deployment",
+    "cruk-react-components": "git+https://[YOUR TOKEN HERE]:x-oauth-basic@github.com/CRUKorg/cruk-react-components.git",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.2.39",
