@@ -29,7 +29,17 @@ const IndexPage = () => {
   const [showModal, setShowModal] = React.useState(false)
   const toggleShowModal = () => setShowModal(!showModal)
   const [page, setPage] = React.useState(1)
-  const [selectedEmail, setSelectedEmail] = React.useState('yes')
+  const [selectedOption, setSelectedOption] = React.useState("one")
+  const [selectedEmail, setSelectedEmail] = React.useState("yes")
+  const [selected, setSelected] = React.useState(["one"])
+
+  const handleSelectChange = value => {
+    if (selected.indexOf(value) === -1) {
+      setSelected([...selected, value])
+    } else {
+      setSelected(selected.filter(item => item !== value))
+    }
+  }
 
   return (
     <Layout>
@@ -39,8 +49,22 @@ const IndexPage = () => {
       <Box bgColor="primary">This is box</Box>
       <Button>Some button</Button>
       <Button appearance="primary">Primary</Button>
-      <Checkbox checked value="value" />
-      <Checkbox checked={false}>Checkbox</Checkbox>
+      <Checkbox
+        name="example"
+        onChange={e => handleSelectChange(e.target.value)}
+        value="one"
+        checked={selected.indexOf("one") >= 0}
+      >
+        Option one
+      </Checkbox>
+      <Checkbox
+        name="example"
+        onChange={e => handleSelectChange(e.target.value)}
+        value="two"
+        checked={selected.indexOf("two") >= 0}
+      >
+        Option two
+      </Checkbox>
       <Collapse headerTitle="What is Lorem Ipsum?" id="default">
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -101,19 +125,39 @@ const IndexPage = () => {
       </PopOver>
       <ProgressBar percentage="50" />
       <ProgressBar percentage="50" isCircular />
-      <Radio checked name="example" value="First option" />
-      <Radio name="example" value="Second option" />
-      <RadioGroup 
+      <Radio
+        name="example1"
+        onChange={e => setSelectedOption(e.target.value)}
+        value="one"
+        checked={selectedOption === "one"}
+      >
+        Option one
+      </Radio>
+      <Radio
+        name="example1"
+        onChange={e => setSelectedOption(e.target.value)}
+        value="two"
+        checked={selectedOption === "two"}
+      >
+        Option two
+      </Radio>
+      <RadioGroup
         legend="Email"
         name="email"
         onChange={e => setSelectedEmail(e.target.value)}
-        attributes= {[{option: 'Yes', value: 'yes'},{option: 'No', value: 'no'}]}
+        attributes={[
+          { option: "Yes", value: "yes" },
+          { option: "No", value: "no" },
+        ]}
         checked={selectedEmail}
       />
       <Select error="This feild is required ☹️" label="Error message">
         <option value="cat">Cat</option>
       </Select>
-      <Step current="3" steps={['Account','Details','Activity','Motivation','Page']} />
+      <Step
+        current="3"
+        steps={["Account", "Details", "Activity", "Motivation", "Page"]}
+      />
       <TextField
         label="Extra left"
         extraLeft="£"
